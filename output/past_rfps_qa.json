@@ -1,670 +1,302 @@
 [
   {
-    "question": "Please provide your company’s basic information?",
-    "answer": "APX Stream, Inc.\n32880 IH 10 West, Suite 103\nBoerne Texas 78006\n888-411-1440\nInception date: March 2010\nRichard Jackson, CIMA CEO, Kevin Dunn Chief Operations Officer."
+    "question": "A.1\tWhat is your company’s full legal name?",
+    "answer": "A.2\tIs your company a limited company? (If yes, please state whether it is public or private and provide the registered number)"
   },
   {
-    "question": "Do you have a parent company? Are you privately held?",
-    "answer": "APX Stream has no parent company and is privately held by Richard Jackson & the Jackson Family Trust"
+    "question": "A.3\tWhat is your company’s registered Head Office address and number?",
+    "answer": "A.4\tWhen did your company commence trading?"
   },
   {
-    "question": "Are you profitable?",
-    "answer": "APX Stream has been profitable every quarter over the past 8 years."
+    "question": "A.5\tWhen did your company enter this solution into the market?",
+    "answer": "A.6\tIf different to A.3, please provide the address of branch / office from where business with Insight would be administered (if applicable)"
   },
   {
-    "question": "Are all your operations based in the U.S.?",
-    "answer": "Yes. APX Stream is headquartered in Boerne, Texas, with additional employees in Arizona and Illinois."
+    "question": "A.7\tPlease outline Insight’s point of contact at your company (Name and position)?",
+    "answer": "A.8\tPlease provide the contact details for Insight’s point of contact (Email address and phone number)?"
   },
   {
-    "question": "What is your corporate structure?",
-    "answer": "Please provide names, titles, and bios of all Senior Executives?"
+    "question": "A.9\tPlease provide a table of financial results?",
+    "answer": "A.10\tIs your company part of a larger group?  If yes, please provide the name of your parent company, and explain how your company and associated solution fits into those of your parent and associated companies.  Please complete the following table of financial results:"
   },
   {
-    "question": "Does your Company plan to use other entities or individuals, including subsidiaries, affiliates, partnerships / joint ventures or other type of intermediary to perform any client services?",
-    "answer": "APX Stream’s proprietary line of products and service is entirely independent of any external individuals, subsidiaries, affiliates, and/or partnerships/joint ventures."
+    "question": "A.11\tIf your company is yet to make a profit, when do you expect to do so?",
+    "answer": "A.12\tHow many development staff does your company have in the UK?"
   },
   {
-    "question": "Does APX Stream have any conflicts of interest?",
-    "answer": "No, APX Stream has no conflicts of interest. We are independent or any parent company and privately-held. Every professional decision that is made by the management team is done so with the intention of promoting our clients’ best interests, not that of a corporate owner or private equity firm."
+    "question": "A.13\tPlease provide details of the major shareholders in your company?",
+    "answer": "A.14\tPlease describe your company’s structure, giving the function of each division and the names of key individuals?"
   },
   {
-    "question": "Has your company or any principal in your company (e.g. director, partner or principal) ever been subject to a bankruptcy, insolvency order, law suit, or involved in any fraudulent or illegal activities, or have been disciplined by a regulatory agency?",
-    "answer": "No."
+    "question": "A.15\tPlease describe any third parties that your company uses in relation to your business?",
+    "answer": "A.16\tDoes your company have any joint ventures, partnerships or relationships that are relevant to Insight and this response?"
   },
   {
-    "question": "Does your company have a Code of Conduct / Ethics in place?",
-    "answer": "Yes, APX Stream and each of its staff are required to sign every year an employment agreement and code of ethics. Also, The Investments and Wealth Association maintains the firm’s and principal’s accreditation, ensuring adherence to IW’s extensive code of ethics and through Continuing Education Ethics requirements."
+    "question": "A.17\tPlease provide a breakdown of new customer implementations that you have undertaken over the last two years and the areas in which they operate?",
+    "answer": "A.18\tPlease provide a further breakdown of your financial sector customers, e.g. asset managers, fund managers, insurance companies, property managers?"
   },
   {
-    "question": "Per the United Kingdom’s “Modern Slavery Act 2015,” can you comply with the following statements?",
-    "answer": "Has neither your company nor any company in your group has committed or been notified or placed under investigation for any offences relating to modern slavery or human trafficking?"
+    "question": "A.19\tPlease describe three features or service differentiators that you believe provide significant benefits over and above your competitors?",
+    "answer": "A.20\tPlease provide two Asset / Investment Manager client references for your solution (Please provide company name, contact name, position in company, email address and confirmation that they can be contacted by Insight)?"
   },
   {
-    "question": "Do any customers account for more than 25% or more of your revenue?",
-    "answer": "No client accounts for more than 25% APX Stream’s revenues."
+    "question": "A.22\tPlease provide a copy of your company’s standard Terms of Business (Please ensure the supporting material is clearly labelled and referenced)?",
+    "answer": "A.23\tHas your company or any principal in your company (e.g. director, partner or principal) ever been subject to a bankruptcy or insolvency order either in the UK or outside the UK?"
   },
   {
-    "question": "What is your client retention rate?",
-    "answer": "APX Stream’s retention rate is extremely high – over 95%. APX Stream’s lack of complacency in the area of client service, as well as the APX Stream Development Team’s efforts to ensure the DataDrive remains a vitally important component to our manager clients’ ongoing business functions is key to our successful long-term relationships."
+    "question": "A.24\tHas your company or any principal in your company (e.g. director, partner or principal) ever been subject to any investigation or disciplinary action taken by the FCA or other regulatory body in the UK or outside the UK?",
+    "answer": "A.25\tHas your company or any principal in your company (e.g. director, partner or principal) ever been subject to any litigation within the last ten years (include any pending proceedings)?."
   },
   {
-    "question": "How are your costs calculated?",
-    "answer": "We typically bill on a per-profile basis for data distribution. One product or vehicle in one database equals 1 profile, so 5 vehicles in 10 databases equals 50 profiles. Our billing schedule is as follows:"
+    "question": "A.26\tHas your company or any principal in your company (e.g. director, partner or principal) ever been subject of an investigation into allegations of misconduct or malpractice in connection with any business activity?",
+    "answer": "A.27\tHas your company or any principal in your company (e.g. director, partner or principal) ever been investigated for or accused of corrupt conduct or bribery?"
   },
   {
-    "question": "What guarantees does your company offer in terms of pricing?",
-    "answer": "APX Stream guarantees pricing for 2 years after execution of contract. From a practical standpoint, after 11 years in business, APX Stream has never raised its prices on existing clients. As technology and efficiency improves, the firm has been able to reduce its fees on occasion."
+    "question": "A.29\tHas your company or any principal in your company (e.g. director, partner or principal) ever been disqualified by a court from acting as a director of a company or from acting in a management capacity or conducting the affairs of any company, partnership or unincorporated association?",
+    "answer": "A.30\tRight to Audit - Does your company agree to comply with this requirement? (During the Service Term of the Agreement, upon reasonable notice in writing, Insight investment (and any auditors (wherever internal or external) regulators and/or any governmental authorities), shall have the right to audit participant premises/and systems in order to assess compliance with Insight Investment policies and responses to security questionnaire, at no additional cost to Insight)?"
   },
   {
-    "question": "How many products are included in the fee structure? Are there limitations on the number of databases supported?",
-    "answer": "Depending on the size of the account, APX Stream bills by either the product or the vehicle. For example, 101 vehicles published to 10 databases would equal 1,010 profiles and would qualify for a $60 per-profile rate, and a quarterly fee of $60,600."
+    "question": "A.31\tDoes your company have a Code of Conduct / Ethics in place?",
+    "answer": "A.32\tDoes your company have an Anti-Bribery and Corruption Policy in place? (If yes, please indicate if the Policy covers controls relating to gifts and entertainment, expenses and political / charitable donations)"
   },
   {
-    "question": "Please can you confirm what discounts you offer to new clients in the first year?",
-    "answer": "APX Stream does not, as a matter of routine, maintain a specific discount schedule for any “first year” reasons. APX Stream’s service offerings are specifically priced to be as competitive as possible. We do offer discounts at specific profile break points (301, 1,001, 3,001), as can be viewed in the matrix above."
+    "question": "A.33\tDoes your company prohibit facilitation payments, including to public officials?",
+    "answer": "A.34\tDoes your company require its employees to undergo Anti-Bribery and Corruption training?"
   },
   {
-    "question": "How many clients do you currently support in providing investment data distribution? If possible, please provide a list of representative clients?",
-    "answer": "APX Stream currently has approximately 70 clients in North America, the UK, Europe, & Asia."
+    "question": "A.37\tIf yes to A.36, does your company have processes in place to ensure that sub-contractors comply with all applicable Anti Bribery and Corruption rules and regulations?",
+    "answer": "A.38\tIf yes to A.36, please describe how your company select sub-contractors and / or Franchisees, the vetting procedure used and what ongoing reviews are conducted to confirm their suitability?"
   },
   {
-    "question": "Please provide two Asset / Investment Manager client references for your services?",
-    "answer": "RWC: Jack Lane, Direct: +44 20 7227 6024; jack.lane@rwcpartners.com"
+    "question": "A.40\tConflict of Interest: It is important that no inappropriate relationship exists between the employees or directors of Insight and your company that could affect the outcome of this RFP evaluation process. You are required to advise us of any relationships / employees, that you are aware of, where involvement with Insight that could compromise the RFP evaluation process?",
+    "answer": "If a relationship exists, please provide details of the relationship"
   },
   {
-    "question": "Please describe your business?",
-    "answer": "APX Stream is the largest independent global manager and distributor of investment data to the investment databases (e.g.: Investment Metrics, eVestment, PSN, Morningstar, Callan, etc.). APX Stream offers  related services, including consulting, DDQ automation, and database services for intermediaries. Our core mission is to enhance our clients’ significance in the investment management industry through the effective deployment of market-leading data management and distribution tools, consulting, and services."
+    "question": "B.1\tPlease describe the proposed technology solution?",
+    "answer": "B.2\tPlease describe the advantages of your proposed technology solution, including any known advantages over in-house built systems, including observable outcomes to operational efficiencies?"
   },
   {
-    "question": "What differentiates your firm and product?",
-    "answer": "Consulting.  Data management and distribution is APX Stream’s sole business function. As such, its expertise in this area is without peer. APX Stream leverages this expertise on behalf its manager clients through quarterly, ongoing database consulting. APX Stream has the most comprehensive database research function in the industry, with more than 50 fact sheets detailing the databases with which the firm works. APX Stream database consulting enables manager clients to make informed, effective decisions with regard to database footprint growth."
+    "question": "B.3\tPlease explain your market standing and any competitive advantages that are unique to your solution. What unique benefits will make your solution more likely to succeed?",
+    "answer": "B.4\tPlease detail any enhancements to your technology solution in the last three years"
   },
   {
-    "question": "Please explain your market standing and any competitive advantages that are unique to your solution. What unique benefits will make your solution more likely to succeed?",
-    "answer": "APX Stream is the largest independent distributor of investment data to the industry databases, working exclusively for our manager clients, agnostic to database selection, and free from any conflicts arising from corporate ownership."
+    "question": "B.7\tThinking of your most and least challenging onboarding experiences with current clients, what experiences can you share with Insight that will make your solution proposal for Insight more likely to succeed?",
+    "answer": "B.8\tHow would you handle a significant change to file formats? Is this process managed by Insight, and if so, how much support would be available?"
   },
   {
-    "question": "Consulting.  Data management and distribution is APX Stream’s sole business function. As such, its expertise in this area is without peer. APX Stream leverages this expertise on behalf its manager clients through quarterly, ongoing database consulting. APX Stream has the most comprehensive database research function in the industry, with more than 50 fact sheets detailing the databases with which the firm works. APX Stream database consulting enables manager clients to make informed, effective decisions with regard to database footprint growth. Managers should be abe to easily answer the question: Why do we publish to this database?",
-    "answer": "Independence and Client Focus.  Relatedly, APX Stream’s independence from corporate ownership ensures that every client-facing decision supports the manager’s strategic goals. APX Stream has no conflicts of interest that might influence its decision-making process – every action taken by APX Stream is with the intention of assisting the manager client to grow and retain AUM through effective integration of data marketing within the manager client’s broader marketing strategy."
+    "question": "B.9\tWhat is the most likely cause of error, and what is the likelihood that it will be discovered before data is published? What controls do you have in place to prevent this?",
+    "answer": "B.10\tHow do you accommodate changes in the data or data structures required by external databases? How quickly are these changes accommodated, and how much action is required by Insight in these scenarios?"
   },
   {
-    "question": "What are APX Stream’s specific advantages over eVestment’s Omni or other data distribution solutions?",
-    "answer": "APX maintains three primary advantages over OMNI and other solutions:"
+    "question": "C.1\tPlease provide a quote for: (1) Implementation costs; (2) Ongoing costs (Please ensure that the total price breakdown equates to the total price); and (3) provide cost for individual licences, so we can understand how much each licence for each module costs per year.?",
+    "answer": "C.2\tPlease provide an indication, if any, of the costs of system upgrades.?"
   },
   {
-    "question": "Please describe the selection criteria for contractor or co-implementation partners?",
-    "answer": "APX Stream has not employed contractors or co-implementation partners for the past 12 months. However, when APX Stream has done so in the past, strict criteria for all outsourced and/or contracted services are met. All contractors and/or vendors must go through a rigorous due diligence process to satisfy all questions and concerns pertaining to security and reliability. APX Stream’s process identifies and eliminates conflicts of interest and potential regulatory issues through extensive vetting and due diligence. APX Stream’s focus is seamless connectivity between all of the manager’s “data-in” sources with the relevant “data-out” portals and publications."
+    "question": "C.3\tPlease confirm that the above costs are complete and that no other expenditure will be required to implement the proposed solution (If not complete, please outline the additional costs and the reasons for these)?",
+    "answer": "C3.a.\tThe number of marketed strategies / profiles across consultant databases may fluctuate during the course of a billing cycle to accommodate for product launches and deactivations. Please explain how you would accommodate a mid-cycle change to the number of strategies / profiles, both as increases and as decreases in quantity, in terms of billing. If billed in advance, please specify how this would be managed on a pro rata basis (e.g. refund, etc).?"
   },
   {
-    "question": "Please describe your position on ESG and your related practices?",
-    "answer": "APX Stream is a minority-owned and accredited firm and an equal opportunity employer with over 60% of the firm’s staff are minority ethnicities."
+    "question": "C.4\tWhat guarantees does your company offer in terms of pricing? Please specify how Insight would be notified of any fee increase, and what the limit of those increases would be. Implementation?",
+    "answer": "D.1\tWhat is a ‘standard’ implementation cycle, including data conversion, delivery and installation, for your standard product?"
   },
   {
-    "question": "Does your firm have a policy that describes your approach to identifying and managing material environmental, social, or governance (ESG) factors? If so, please provide a copy. If not, please indicate whether the firm is developing such a policy?",
-    "answer": "APX Stream is a minority-owned and accredited firm and an equal opportunity employer with over 60% of the firm’s staff belonging to ethnic minorities."
+    "question": "D.2\tWhat is a ‘standard’ implementation cycle, including data conversion, delivery and installation, for a customised version?",
+    "answer": "D.3\tPlease describe the support that would be provided to Insight, within the contract price, during a standard implementation?"
   },
   {
-    "question": "Does the firm have an ESG (or similar functioning) Committee? Please describe how it operates?",
-    "answer": "As a data management and distribution firm, APX Stream is fully digitized, with a strong code of ethics, and a carefully considered procurement process. As such, the firm’s day-to-day culture strongly reflects an ESG mindset, though a formal committee does not exist."
+    "question": "D.5\tWhat split of resource would you advocate between Insight and yourselves for this implementation?",
+    "answer": "D.6\tWhat testing strategy would you advocate?"
   },
   {
-    "question": "Describe your firm’s approach to workplace diversity and inclusion and how it relates to your business model?",
-    "answer": "APX Stream is a minority-owned business, with significant diversity (60%) in its employee base. Because APX Stream prefers to promote from within, the firm develops and retains its own talent in order to foster a culture of togetherness and ownership. APX Stream, by definition, maintains a strong bias towards a diversity-based business model and corporate culture."
+    "question": "D.7\tWhat procedures do you recommend / support for testing links to third parties?",
+    "answer": "D.8\tWhat training will be required for Insight staff to use the system (both initially and ongoing)?  What different levels of training would be required for different users of the system?"
   },
   {
-    "question": "Is your company a MWDBE certified? Do you have a policy on diversity? If so, please include?",
-    "answer": "APX Stream is not MWDBE-certified, but it is a minority-owned and minority-staffed firm."
+    "question": "D.9\tCan the training be customised to reflect Insight’s use of the system?",
+    "answer": "D.10\tAt what location(s) is your software developed, enhanced, supported?"
   },
   {
-    "question": "Does your firm have a written policy addressing workplace diversity and inclusion (“D&I Policy”)?",
-    "answer": "APX Stream is a minority-owned firm with a very diverse background staff. APX Stream is non-discriminatory and all hiring practices reflect strict adherence to a non-discriminatory selection process."
+    "question": "D.11\tHow much support would you expect to provide to Insight on an on-going basis?",
+    "answer": "D.12\tPlease provide details of your support organisation (Please include an organisation chart, number of staff showing skill categories, type of products supported, and number of customers supported)?"
   },
   {
-    "question": "Does the firm have an Anti-Harassment/Discrimination Policy? How often is training provided on the Policy to employees? Does the firm intend to adopt such a policy and, if so, when?",
-    "answer": "APX Stream has a detailed anti-harassment and anti-discriminatory policy. This is reviewed and employee acknowledged on a semi-annual basis and in the employee onboarding process."
+    "question": "D.13\tProvide details of your current Service Level Agreements (‘SLAs’) for support?",
+    "answer": "D.14\tPlease define the Help Desk / remote support facilities provided by your company?"
   },
   {
-    "question": "Has your firm been subject to any judicial, regulatory, or other legal finding, formal action, or claims related to equal employment opportunity, workplace discrimination, or sexual harassment during the past five years? Please describe?",
-    "answer": "APX Stream has never been subject to any judicial, regulatory, or other legal finding, formal action, or claims related to equal employment opportunity, workplace discrimination, or sexual harassment throughout its entire history."
+    "question": "D.15\tDuring what hours is your company’s Help Desk available for contact / queries?",
+    "answer": "D.16\tWhere is your company’s Help Desk located?"
   },
   {
-    "question": "Does the firm comply with Subchapter VII of the Civil Rights Act of 1964, 42 U.S. Code Sections 2000(e) through 2000(e)(17), to the end that no person shall, on grounds of race, creed, color, sex or national origin be excluded from participation in, be denied benefits, or be otherwise subjected to discrimination?",
-    "answer": "APX Stream complies with all federal, state, and local prohibitions against discrimination."
+    "question": "D.17\tWhat are your company’s emergency contact procedures?",
+    "answer": "D.18\tWhat customer service performance indicators does your company monitor?"
   },
   {
-    "question": "How is the firm committed to the safety of its employees?",
-    "answer": "APX Stream complies with all relevant state and local ordinances with regard to employee safety. Furthermore, throughout the course of the COVID-19 pandemic, APX Stream regularly exceeded local and state regulations in diligently maintaining a safe working environment."
+    "question": "D.19\tPlease outline the details of your company’s problem resolution and escalation procedures?",
+    "answer": "D.20\tWhat are your procedures for ongoing relationship monitoring including oversight and escalation?"
   },
   {
-    "question": "How is the firm committed to energy, water and waste efficiency?",
-    "answer": "APX Stream relies on the cloud for documentation and filing across every department. APX Stream utilizes less than one ream of paper per year for the entire office complex. All computers, lights, and chargers are shut down or unplugged on a nightly basis."
+    "question": "D.21\tWhat is your company’s policy regarding system upgrades?  (Please include how often are system upgrades issued, and what level of support do you provide for older versions). Information security?",
+    "answer": "E.1\tDoes your solution have any special / new platforms on which it needs to be deployed?."
   },
   {
-    "question": "How does your firm engage with tenants and local stakeholders to raise and improve environmental and social issues?",
-    "answer": "APX Stream works with its property management firm and fellow tenants to ensure a safe, secure working environment for all employees.  As a minority-owned and staffed firm in the State of Texas, APX Stream believes the manner in which it conducts its business is the most powerful example it can provide. As APX Stream continues to grow and becomes a more widely-recognized business leader, its ability to effect meaningful change in these areas will grow as well."
+    "question": "E.2\tPlease outline the platform used and the components involved (For example MS SQL 2010 instance XYZ)?",
+    "answer": "E.3\tPlease provide a view of where the components and the platform reside (Please include the logical and physical locations)?"
   },
   {
-    "question": "What are the terms of contracts? Annual? Multiple Years?",
-    "answer": "Contracts are annual, and pricing guaranteed for 2 years. Though pricing never increases, pricing will decrease as a result of active software development and automation: automation provides immense scalability, scalability drives down costs, which APX Stream delivers to its clients. Price decreases are effective immediately."
+    "question": "E.4\tWhere known, please advise as to the regulatory and / or compliance policy requirements that may be applicable for to the solution?",
+    "answer": "E.5\tWhere known, please advise if any potential sensitive personal data may be processed / and or stored?"
   },
   {
-    "question": "Please describe the advantages of your proposed technology solution, including any known advantages over in-house built systems, including observable outcomes to operational efficiencies?",
-    "answer": "The APX Stream DataDrive offers several advantages not offered by in-house systems or our competitors:"
+    "question": "E.6\tPlease provide an overview of how privacy obligations are fulfilled (For example, ongoing privacy impact assessments are conducted for GDPR purposes)?",
+    "answer": "E.7\tDoes the solution support Single-Sign-On to refer authentication back Insight’s directory (e.g. Active Directory)? Briefly outline the SSO features and protocols supported by the service?"
   },
   {
-    "question": "Please provide an overview of how investment manager products are organized on the system. Please include an image / screen grab to demonstrate what the system looks like?",
-    "answer": "The DataDrive is a highly organized, intuitively-designed SQL database that structures data hierarchically. Broadly, data is first organized at the firm level, then the product level, the vehicle level. The following graph illustrates the 14 datasets managed by the DataDrive:"
+    "question": "E.9\tHow does the authentication happen? (Include both user-to-application authentication and any application-to-application/Web service/API authentication and or component-to-component authentication) Authentication occurs using credential/password authentication for login, Microsoft MVC authentication for the session?",
+    "answer": "E.10\tWhat functional access capabilities (e.g. read-only, read-write, review, approve, administrative capabilities, etc.) are involved with the application/service?"
   },
   {
-    "question": "Please detail any enhancements to your technology solution in the last three years?",
-    "answer": "APX Stream has expanded its connectivity to include all 14 qualitative and quantitative datasets in an investment profile. The ongoing development into the qualitative data is never-ending, with new efficiencies are rolled out every quarter. APX Stream has recently begun programming key investment questionnaires for easy, time-saving publication. Additionally, APX Stream is forging additional partnerships every quarter to grow connectivity between portfolio management systems and the DataDrive, which makes the data assembly process even more fluid and reliable."
+    "question": "E.14\tProvide details how authentication credential that will be allocated to Insight are protected when stored?",
+    "answer": "E.15\tWhat data stores are involved (e.g. files, databases, etc.)?"
   },
   {
-    "question": "What is your company’s policy regarding system upgrades?",
-    "answer": "APX Stream systems are always evolving, by necessity. APX Stream understands it must proactively keep pace with both changes within the database industry, as well as within our competitive space."
+    "question": "E.16\tWhat data elements are protected at rest and please describe the encryption mechanism? Provide details on how the data stores (e.g. in files and databases) are protected from unauthorised access & modification, detailing the type of encryption and strength used.?",
+    "answer": "E.17\tPlease specify the technical host and processing site for data stores?"
   },
   {
-    "question": "Please provide a list of the current database platforms you work with?",
-    "answer": "APX Stream has established connectivity and analyst fluency with each database. The current database list includes:"
+    "question": "E.18\tPlease outline how test data in development and test environments is protected to the same standards as live data?",
+    "answer": "E.19\tIs any Insight data hosted externally? (If yes, please explain what data is hosted externally and how the data is managed and protected)?"
   },
   {
-    "question": "What major databases does APX Stream NOT populate/support? (Is there a list)?",
-    "answer": "APX Stream is automated to each of the top industry databases, with reliable connectivity to more than 50 databases across the globe. In all, APX Stream maintains distribution connectivity to more than 60 databases/portals across the US, Canada, Europe, and Asia."
+    "question": "E.20\tIs there any data export / import involved? (If yes, please explain what data is exported / imported, the routes used to transfer the data, and the methods used to transfer the data)?",
+    "answer": "E.21\tAre there any keys / certificates involved? (If yes, please describe the purpose and how they are secured and are managed on an ongoing basis)?"
   },
   {
-    "question": "How do you engage with contacts at your current database platforms?",
-    "answer": "APX Stream has longstanding, ongoing relationships with every database, at both the technical and management level. In its normal course of business, APX Stream is in contact with each database via telephone, email, and GoTo/Zoom/Teams meetings, at least quarterly."
+    "question": "E.22\tProvide details on the network configuration required for the traffic flow between Insight and the solution?",
+    "answer": "E.23\tAre there any certificates involved for establishing the trust relationship between Insight and the external entity? (If yes, please explain who would provide the certificates, how these are managed, the lifetime of the certificates and the encryption used)"
   },
   {
-    "question": "What is the process to have your firm engage with a new database platform?",
-    "answer": "APX Stream is routinely asked by manager clients to research and publish to new databases. APX Stream initiates a full due diligence and research process upon each request, and its Tech and Analyst Teams connect for automation and training."
+    "question": "E.24\tWhat type of events (e.g. network events, application events, system events, database events, middleware events) are logged / captured for monitoring and auditing?",
+    "answer": "E.25\tWhere are the logs stored and how is the access to logs controlled?"
   },
   {
-    "question": "Describe the registration process for new strategies on both existing databases and on new databases?",
-    "answer": "APX Stream is familiar with the installation processes and systems for each database. APX Stream has several templates built to help streamline new product installation. APX Stream then relies on its proprietary software and the expertise of its Data Analyst Team to fulfill and thoroughly complete an audited installation, all in a timely fashion."
+    "question": "E.26\tWhat monitoring and auditing capabilities are supported by the solution?",
+    "answer": "E.27\tDoes the solution allow the SIEM tool integration (i.e. LogRhythm)? Or are there any customisation to be done in order to integrate with the SIEM tool?"
   },
   {
-    "question": "Does your current technology/platform lend itself to further automation?",
-    "answer": "APX Stream’s DataDrive is in continual development, with many of its improvements originating as requests from its manager clients. The DataDrive’s tools and automation functionality are routinely evaluated, assessed, and improved."
+    "question": "E.28\tWhat are the retention requirements for logs and audits?",
+    "answer": "E.29\tWho (which teams) are responsible for logging, monitoring and auditing?"
   },
   {
-    "question": "Describe how data is populated across databases and the technology that is utilized. Please distinguish between quantitative and qualitative data?",
-    "answer": "The APX Stream data distribution process relies on an optimal combination of proprietary software code and a highly experienced Senior Analyst Team."
+    "question": "E.32\tHow is the solution security patched and upgraded?",
+    "answer": "E.33\tWhat patches will the system require (Adobe, Microsoft, your company etc.) and how will they be communicated, obtained, and applied?"
   },
   {
-    "question": "What are the costs and turnaround times for populating data once received from the manager? Please provide an overview of the process involved?",
-    "answer": "For new profile installation:\nWith comprehensive knowledge of and experience with the consultant databases, APX Stream installs new firm and product profiles for a one-time cost of $150 per profile. This fee includes backloading performance since inception and all other data sets back a minimum of two quarters."
+    "question": "E.34\tWhat is the licensing model (e.g. per user) and is there any distinction between a normal user and admin user from a licensing point of view?",
+    "answer": "E.35\tWho is the license approval authority?"
   },
   {
-    "question": "Does APX Stream charge to do backfills of data? If so, how are costs calculated?",
-    "answer": "As part of APX Stream’s comprehensive installation process, the team identifies “voids” during the initial install, as well as when audits of a client’s existing profiles are conducted. The final step in the distribution process is a thorough reconciliation/verification of the newly published data. APX Stream’s reconciliation process leverages both its industry-leading software, as well as the expertise of the Senior Analyst staff."
+    "question": "E.37\tIf your solution is Desktop installed, please confirm the installer package can be provided in either .MSI or .EXE formats for desktop applications?",
+    "answer": "E.38\tPlease provide evidence of any ISO27001 and SOC2 certifications?"
   },
   {
-    "question": "Does APX Stream charge to do performance refreshes back to inception once a year?",
-    "answer": "APX Stream always encourages its clients to provide freshly-audited performance data anytime, and will distribute and reconcile this new data at no charge. Additionally, because the systems that APX Stream uses for its distribution process are highly efficient, there are no restatement fees."
+    "question": "E.41\tBriefly describe the access control features that are available within the service.?",
+    "answer": "E.42\tWhere open source component is involved, how is the change and release management for the open source component handled?"
   },
   {
-    "question": "How is a client’s pricing affected by industry consolidations (e.g.: Mercer/eVestment and Cambridge/eVestment)?",
-    "answer": "The database industry is always changing, and after 11 years actively managing and advising asset managers on how to develop and maintain an optimal profile footprint, APX Stream finds itself installing and deactivating client data profiles every quarter as a normal course of business."
+    "question": "E.43\tCould the vendor provide Insight with support and assurances around the processes of security incident management, sharing information, incident response, and ongoing security management?",
+    "answer": "E.44\tHow is the very first Insight user (Administrative user) onboarded to the service/solution (so Admin user can then set up other Insight users for SSO)? Outline the process of the one-time first user setup credential communication process."
   },
   {
-    "question": "Does APX Stream address footnotes, static data fields, and other hard-to-categorize datasets?",
-    "answer": "APX Stream distributes all data that is provided by the client– including static data fields and footnote comments. Additionally, all key documents needed for publishing are maintained up to date, distributed and tracked in the DataDrive."
+    "question": "F.1\tIs your solution hosted by your company (SaaS) or by Insight?",
+    "answer": "F.2\tIf in response to F.1, it is Insight hosted:"
   },
   {
-    "question": "Does APX Stream populate static data as well as dynamic data (e.g.: policy ranges, value added percentages, fee minimums and schedules)?",
-    "answer": "APX Stream can publish every field of data the client and databases/DDQs require."
+    "question": "What operating systems are required? Are (or can) the components be containerised as a fully supported configuration?",
+    "answer": "What third party components are also required? (e.g. web server, reverse proxy, etc.)"
   },
   {
-    "question": "Please provide a detailed overview of your QA process across all databases.  Specifically, what checks and balances do you have in place?",
-    "answer": "Data integrity is the hallmark of APX Stream’s data management and distribution services. Data verification and quality assurance occurs throughout the entire quarter in three stages: data assembly, data distribution, and data reconciliation."
+    "question": "What type of databases are supported and what are they for? What are common growth volumes?",
+    "answer": "What is the process for updating the software and is it automated?"
   },
   {
-    "question": "Describe the audits conducted and the frequency of such audits (i.e. auditing client information in the databases)?",
-    "answer": "All monthly and quarterly data submissions are audited repeatedly throughout every quarter."
+    "question": "Is there a dedicated infrastructure / shared tenant?",
+    "answer": "Is the solution available on Azure?"
   },
   {
-    "question": "Does APX Stream only collect data using their proprietary templates, or are portfolio management systems, such as FactSet, Advent, Blackrock Aladdin, or any other proprietary system reports accepted?",
-    "answer": "APX Stream accepts data in any format in which the client chooses to provide it. APX is in constant discussions with firms such as FactSet and Advent to establish connectivity which provides an ever-more seamless movement of data across the entire data management process. If an APX Stream client requests FactSet to establish connectivity to its DataDrive, APX Stream is fully prepared to make that happen as soon as possible."
+    "question": "How is data encoded at rest and on the wire: between components (internally) and user communications (externally)?",
+    "answer": "What is the access, availability, performance and support Service Level Agreements (‘SLAs’)? (Please also outline the support model)?"
   },
   {
-    "question": "Please include an image / screen grab to demonstrate what the system looks like?",
-    "answer": "The DataDrive is a highly organized, intuitively-designed SQL database that structures data hierarchically. Broadly, data is first organized at the firm level, then the product level, the the vehicle level. The following graph illustrates the 14 datasets managed by the DataDrive:"
+    "question": "F.4\tPlease provide architecture diagrams from both a business and network perspective (If SaaS, please ensure any optional or required connectivity travelling into our network is clearly indicated)?",
+    "answer": "F.5\tAre user-based components web-based or does it require any native desktop components? If desktop, is there a client run-time and if so, are there any licensing implications?"
   },
   {
-    "question": "How is investment manager data initially uploaded to the system? What support do you offer to facilitate the initial upload?",
-    "answer": "APX Stream provides clients with proprietary APX templates that work seamlessly with the DataDrive. Additionally, the client’s internal team can import its historical data to the DataDrive using its own templates, through either a direct feed from its portfolio management software system, or in virtually any format in which a client chooses to provide it, including any templates from former or existing service providers."
+    "question": "F.6\tPlease describe the route to live for changes Insight make to your solution (e.g. configuration, code, UIs) including the use of any DEV / UAT instances and the promotion to production environments where relevant (Please also include whether test environments carry additional license or hosting costs)?",
+    "answer": "F.7\tPlease describe the role of administrator or support users and the common activity?"
   },
   {
-    "question": "How is monthly or quarterly investment manager data uploaded to the system?",
-    "answer": "The APX Stream DataDrive acts as the client’s data repository and can accept three forms of data: quantitative, qualitative, and any marketing collateral or regulatory documents for distribution. Data and documents for any reporting period can be imported to the DataDrive 24-7-365. Specifically:"
+    "question": "F.8\tPlease describe any archiving and backup procedures of data and configurations?",
+    "answer": "F.9\tPlease describe the SLAs regarding the availability of the system?"
   },
   {
-    "question": "When is investment manager data live on databases once added to the system?",
-    "answer": "APX Stream publishes data within 24 hours of submission with the strongest data integrity controls in the industry. APX Stream’s most important differentiator is its data quality assurance."
+    "question": "F.10\tPlease describe the capabilities regarding Disaster Recovery (‘DR’) scenarios where there is a failure or partial failure of the system. (Please include; (1) the procedures for switching over and how would we ensure that no information is lost; and (2) how long it would normally take to get DR operational and any relevant SLAs)?",
+    "answer": "F.11\tPlease describe the data exchange formats / protocols (For example, HTTP REST, JSON, XML, etc)?"
   },
   {
-    "question": "How is existing data populated to the system edited or deleted?",
-    "answer": "Data integrity is a hallmark of the DataDrive’s value proposition. Maintaining that integrity is a never-ending process, as APX Stream’s deep and experienced Senior Analyst team will ensure client data is right even after the first submission. APX Stream does not bill for restatements, as we process restatements as if it were new data and thus triggering all the internal quality control steps in place to ensure data integrity."
+    "question": "F.12\tWhere will the data be hosted? Public cloud (Azure, AWS or Google) or private cloud?",
+    "answer": "F.13\tWhat are the locations of the cloud datacentres that will be used to host Insight Data?"
   },
   {
-    "question": "How many performance track records per product are supported?",
-    "answer": "The APX Stream DataDrive can accommodate for an unlimited number of performance track records (per product/strategy) such as mutual funds share classes, separately managed accounts, composites, UCITS, etc."
+    "question": "F.14\tDoes the solution involve privilege and non-privilege roles? If so, please provide information what these roles are and the roles description?",
+    "answer": "F.14.a\tCan the roles be Insight’s Azure AD?"
   },
   {
-    "question": "Describe the process to populate product narratives.?",
-    "answer": "The Narratives Workbook is unique to the DataDrive and is an exclusive product function, capturing every narrative-level question a client is asked to answer by each database."
+    "question": "F.16\tWhat data Stores types will be used to store Insight Data? (files, databases, etc)?",
+    "answer": "F.17\tDoes your SaaS application require API integration with Insight or other 3rd party applications?"
   },
   {
-    "question": "Our global organization requires two separate firm profiles – a US-domiciled entity as well as a UK-domiciled entity. Does your system support different data entries for each entity?",
-    "answer": "The APX Stream DataDrive is fully capable of publishing data within the U.S.- and U.K.-based parameters. APX Stream has an extensive client base in both Europe and the US, so when APX Stream works with clients maintaining independent entities, yet are owned by a parent company, all data and products are segregated yet accessible via a single sign on (SSO)."
+    "question": "F.17.a\tHow is the API used by Insight Investment within in the scope of the proposed solution?",
+    "answer": "F.17.b\tDo you have documented developer resources? Examples; API Swagger files, endpoints and authentication flows"
   },
   {
-    "question": "What summary view options do you offer to preview product and firm information? Can data be extracted from the system? Please provide an image?",
-    "answer": "Within the DataDrive’s Consultant View feature, all AUM and portfolio characteristics are laid out in the DataDrive as it is represented in each database. In other words, a client will see exactly what consultants and database subscribers see:"
+    "question": "F.17.c\tIs the supplier under contract to supply the API?",
+    "answer": "F.17.d\tAre there additional charges in using or creating a customised API?"
   },
   {
-    "question": "Please highlight any additional information or features about how data is structured on your system?",
-    "answer": "Client investment data is structured in a hierarchical manner, with Firm data, then Product data, then Vehicle data, across each of the 14 datasets noted below:"
+    "question": "F.17.e\tIs the SLA acceptable to the Service Owner and compatible with Insight Investment working practices?",
+    "answer": "F.17.f\tIs there a test API endpoint or else another means to test the API without accessing production data?"
   },
   {
-    "question": "Please highlight any additional information about the data distribution process?",
-    "answer": "The APX Stream data distribution process provides for an optimal combination of proprietary software code and a highly experienced Senior Analyst team. APX Stream is the industry leader in merging data distribution expertise with market-leading technological superiority."
+    "question": "F.17.g\tDetail how the API ensures that the access request is from a trusted identity, i.e. that the requests are coming from the claimed user. Refer to industry standard protocols and specific 'user flows' where known?",
+    "answer": "F.17.h\tDetail how the API ensures that once authenticated, the user requests can only access the data services for which they are entitled. Refer to industry standard protocols and established models where known?"
   },
   {
-    "question": "Please describe the onboarding process. What support will you provide and what requirement do you make from new clients during the process?",
-    "answer": "APX Stream has a dedicated onboarding team focused on “lifting” the burden"
+    "question": "F.17.k\tDetail the Key Lifecycle management processes of all key material (TDE, TLS, API integrations) including key renewal process and compromise detection?",
+    "answer": "F.18\tProvide a scenario and rationale why the 3rd party needs access to company data, as opposed to meta-data or service operational data. What governance and oversight are provided to Insight e.g. authorized access windows, timely reporting etc Quality controls?"
   },
   {
-    "question": "Please describe how products are initially mapped to databases?",
-    "answer": "The standard implementation cycle is approximately two weeks, with tasks that include DataDrive set up, data conversion/mapping, historical data migration and connectivity mapping and testing."
+    "question": "G.1\tPlease describe your company’s software design, development, and release procedures. Please also include how your company ensures that it complies with industry best-practice?",
+    "answer": "G.2\tHow is customer satisfaction determined by the organisation?"
   },
   {
-    "question": "What controls do you have in place to ensure data integrity from Day One?",
-    "answer": "Data integrity is the hallmark of APX Stream’s data management and distribution services. Data verification and quality assurance occurs throughout the entire quarter in three stages: data assembly, data distribution, and data reconciliation."
+    "question": "G.3\tDescribe your company’s procedures for guarding against computer viruses?",
+    "answer": "Maintenance"
   },
   {
-    "question": "Is quality control review completed directly in the APX system or will we need to log into each database to review the output and ensure it transferred properly?",
-    "answer": "Every quarter, the APX Stream process maintains three levels of reconciliation. The first occurs when data is initially delivered to the DataDrive. The second round occurs after the data is published to the databases, with a third round occurring when a second analyst conducts “Fresh Eyes” reconciliation of the published data."
+    "question": "H.1\tHow many bug-fixes were applied to your solution in each of the last two years, and in percentage terms, what proportion of your company’s development resource was taken up by this?",
+    "answer": "H.2\tWhat is the level of maintenance support required from Insight staff, together with the skills required of them?"
   },
   {
-    "question": "How do you accommodate changes in the data or data structures required by external databases?",
-    "answer": "APX Stream monitors over 50 global databases on an ongoing basis across every quarter. Many changes in the databases are found immediately, which allows for ample time to adjust and modify software code and advise our asset managers clients."
+    "question": "H.3\tIs the supply and implementation of software upgrades to your solution included in the annual maintenance charge?",
+    "answer": "H.4\tPlease outline the procedures regarding the following for your solution:"
   },
   {
-    "question": "What is a ‘standard’ implementation cycle, including data conversion, delivery and installation?",
-    "answer": "The standard implementation cycle is approximately two weeks, with tasks including DataDrive set up, data conversion/mapping, and testing. The only tasks required of the client will be providing access to database profiles, working with APX Stream to import historical data, and the initiation of discussions regarding the client’s unique data directives that will form the basis for the client’s Investment Data Manual."
+    "question": "H.5\tWhat is your policy regarding the software remaining compatible with the software environment?",
+    "answer": "H.6\tIf the software environment is changed, please state the normal timescale required to make software compatible?"
   },
   {
-    "question": "Please describe a “typical” implementation from a data perspective?",
-    "answer": "The APX Stream onboarding team will request database access credentials and the prior quarter’s data for forensic analysis. APX Stream will forensically reverse engineer to determine data point mapping and logic of every database. APX Stream will also forward any questions to the manager’s data team to verify mapping logic."
-  },
-  {
-    "question": "What resources can the manager expect to allocate to implementation?",
-    "answer": "APX Stream bears the majority of setup effort, with a 80% / 20% split typical."
-  },
-  {
-    "question": "What procedures do you recommend / support for testing links to third parties?",
-    "answer": "APX Stream tests data transfer connectivity to each database using the previous quarter’s data in a “dry run” to ensure fluid transfer of data."
-  },
-  {
-    "question": "Please describe initial and any ongoing training for using the DataDrive?",
-    "answer": "APX Stream trains and supports the manager’s use of and reliance on its DataDrive. The main focus at the outset (an on an ongoing basis) is efficient, effective data migration into the DataDrive from whatever contact points exist within the manager’s apparatus. APX Stream will devote resources to contribute to efficient assembly of all relevant data going into the manager’s DataDrive."
-  },
-  {
-    "question": "Please outline user types / licence structures you offer, the features of each, how they benefit the data distribution process. Please also highlight any limitations (for example read-only access restricts editing)?",
-    "answer": "APX Stream will offer clients unlimited logins to distribute across its organization. APX Stream believes the greater the usage of the DataDrive by an asset manager’s team, the more indispensable it becomes to the day-in-day-out management of firm data. Efficiencies in the assembly process is enabled by bringing all of the client’s team to participate in the DataDrive."
-  },
-  {
-    "question": "Please outline the support and training you provide both for new and existing clients (through on-boarding and on-going) as well as any specialised training for different user types?",
-    "answer": "With an onboarding process typically lasts only a couple of weeks, as APX acquires the requisite data for the firm, its products and vehicles, and its database footprint information."
-  },
-  {
-    "question": "Do APX Stream clients get a dedicated client service person (a human to call) for day-to-day questions/requests? Or email a team? A salesperson?",
-    "answer": "APX Stream clients will be assigned a dedicated full-time, US-based Senior Analyst, responsible for onboarding, ongoing data management, distribution, reconciliation/verification and quarterly reviews."
-  },
-  {
-    "question": "What support can the manager expect from APX Stream?",
-    "answer": "APX Stream provides same-day response to all client inquiries with regard to client accounts, research, development, operations, and technology."
-  },
-  {
-    "question": "What are your company’s emergency contact procedures?",
-    "answer": "APX Stream has 3 key C-Suite partners. Kevin Dunn (COO) and Richard Jackson (CEO) are the two key contacts for emergency and off-hours inquiries. Additionally, the APX Stream Client Account Manager and Senior Analyst Team are always available to the manager’s team."
-  },
-  {
-    "question": "What customer service performance indicators does your company monitor?",
-    "answer": "APX Stream conducts quarterly detailed reviews with the manager’s data team, assessing the previous quarter’s work, as well as to prepare and plan the next quarter’s improvements and enhancements."
-  },
-  {
-    "question": "Please outline the details of your company’s problem resolution and escalation procedures?",
-    "answer": "As a matter of company policy, APX Stream provides same-day response to all client inquiries with regard to client accounts, research, development, operations, and technology."
-  },
-  {
-    "question": "Does your organization have an Enterprise Risk Management function? Please provide the mandate of the group and the reporting structure?",
-    "answer": "It is the function of the Executive Team (CEO, CMO, COO, CTO) to assess, manage, and mitigate enterprise risk. Risk management sessions are held quarterly to evaluate cyber security, disaster recovery, and business continuity in the event of an emergency."
-  },
-  {
-    "question": "What control activities and monitoring tools are in place within your organization to ensure compliance with changes in external requirements, such as ensuring regulatory and legal rules are incorporated in a timely manner?  Are your data centers under local compliance requirements?  If so, which ones?",
-    "answer": "APX Stream is a member of Investments and Wealth Association (IWA) and Richard Jackson, CEO and Head of Research, is Accredited by IWA as a Certified Investment Management Analyst (CIMA®). Both IWA and the CIMA accreditation maintain rigorous codes of ethics."
-  },
-  {
-    "question": "Providers may be required to confirm compliance with our corporate policies on such items as IT Security and Code of Conduct. Describe your willingness to comply with the requirement?",
-    "answer": "APX Stream works within the unique constraints of each asset manager’s sales, marketing, and compliance staff, and fully adheres to all corporate policies regarding regulatory and branding requirements. APX Stream writes, maintains, and reviews on a quarterly basis a data policy manual for every client, offering unfettered access to this manual via the manager’s portal in the DataDrive."
-  },
-  {
-    "question": "Describe your internal audit function. How large is the staff?  Describe frequency and scope of audits.  What is the reporting line of internal audit in your organization?",
-    "answer": "APX Stream’s Chief Operating Officer is responsible for all internal and external audits of data. All reconciliation of client data is completed within 72 hours of distribution. Further reconciliation continues to occur over each quarter."
-  },
-  {
-    "question": "How does your company ensure that employees have adequate knowledge and experience to fulfill their responsibilities?  Describe your training programs. How do you train contract and temporary employees? If applicable to the services being provided, please include a description of your information security training and awareness programs. How do you ensure that there is a division of roles and responsibilities (segregation of duties) that reasonably prevents a single individual from subverting a critical process?",
-    "answer": "APX Stream training is an ongoing, long-term process that is ever-evolving by necessity, as the database industry is always evolving. APX Stream’s competitive position depends upon continuing education and training. APX Stream assigns a Senior Analyst to each Junior Analyst to mentor and monitor all ongoing training."
-  },
-  {
-    "question": "Please describe APX Stream’s software design, development, and release procedures. Please also include how your company ensures that it complies with industry best-practice?",
-    "answer": "APX Stream uses continuous integration and automated controls to ensure software quality. Application is updated frequently with a combination of code review and automated tolls. All proposed code changes are tracked and approved by stakeholder team."
-  },
-  {
-    "question": "How is customer satisfaction determined by the organization?",
-    "answer": "Customer satisfaction is determined immediately on an on-going basis via open communications protocols."
-  },
-  {
-    "question": "Describe the procedures for guarding against computer viruses and other malicious intrusion?",
-    "answer": "Local machines employ the Microsoft Defender suite of virus protection tools. Back up occurs at off-site data servers daily. APX Stream’s policy does not allow employees to use company resources for personal use."
-  },
-  {
-    "question": "The data system is web-based and most, if not all, of the data is being published to public and proprietary databases. However, what is the level of safety of the data being input into this system? What is the level of safety or controls to prevent outside access who could potentially change data that could then push out to external databases? Is there an audit trail?",
-    "answer": "Up-to-date cybersecurity, for both the DataDrive and APX’s entire system, is maintained via redundant backups, independent servers and third-party expert audits. APX Stream’s Chief Technology Officer and the firm’s US-based, in-house code team maintains APX Stream’s Technology RFP, which is updated as APX Stream adds additional security measures as required by new client requests."
-  },
-  {
-    "question": "Does your solution have any special / new platforms on which it needs to be deployed?",
-    "answer": "No."
-  },
-  {
-    "question": "Please outline the platform used and the components involved (For example MS SQL 2010 instance XYZ)?",
-    "answer": "Windows / ASP.NET / IIS / MS SQL server."
-  },
-  {
-    "question": "Please provide a view of where the components and the platform reside (Please include the logical and physical locations)?",
-    "answer": "Components and the platform reside in APX Stream’s cloud hosting environment and in Dallas, TX."
-  },
-  {
-    "question": "Where known, please advise as to the regulatory and / or compliance policy requirements that may be applicable for to the solution?",
-    "answer": "None are known to be applicable."
-  },
-  {
-    "question": "Where known, please advise if any potential sensitive personal data may be processed / and or stored?",
-    "answer": "No potential sensitive personal data is processed and/or stored."
-  },
-  {
-    "question": "Please provide an overview of how privacy obligations are fulfilled (For example, ongoing privacy impact assessments are conducted for GDPR purposes)?",
-    "answer": "No potential sensitive personal data is processed and/or stored."
-  },
-  {
-    "question": "Does the solution support Single-Sign-On to refer authentication back the client’s directory (e.g. Active Directory)? Briefly outline the SSO features and protocols supported by the service?",
-    "answer": "The solution does not currently support Single-Sign-On."
-  },
-  {
-    "question": "What identities (accounts) are involved (E.g., user, privileged (admin/App account), service accounts)?",
-    "answer": "User accounts and administrator accounts are involved."
-  },
-  {
-    "question": "How does the authentication occur?",
-    "answer": "Authentication occurs using credential/password authentication for login, Microsoft MVC authentication for the session."
-  },
-  {
-    "question": "What functional access capabilities (e.g. read-only, read-write, review, approve, administrative capabilities, etc.) are involved with the application/service?",
-    "answer": "The DataDrive employs read-only, read-write, review, approve, administrative capabilities, etc."
-  },
-  {
-    "question": "Who administers the roles? (Please outline the life cycle management of the role and role privileges)?",
-    "answer": "APX Stream administers roles. The client team can manage their own roles as well."
-  },
-  {
-    "question": "Are there any non-user accounts (e.g. service accounts) involved? (If yes, please provide information)?",
-    "answer": "There are no non-user accounts."
-  },
-  {
-    "question": "What encryption protocols and strengths are used when the data is in transit (over an internet connection)?",
-    "answer": "SHA256RSA / 3072 bit key."
-  },
-  {
-    "question": "Provide details how authentication credentials allocated to the manager are protected when stored?",
-    "answer": "Password is encrypted."
-  },
-  {
-    "question": "What data stores are involved (e.g. files, databases, etc.)?",
-    "answer": "File and database."
-  },
-  {
-    "question": "What data elements are protected at rest and please describe the encryption mechanism? Provide details on how the data stores (e.g. in files and databases) are protected from unauthorized access & modification, detailing the type of encryption and strength used?",
-    "answer": "The user password in encrypted at rest. The servers have access limited to necessary personnel only."
-  },
-  {
-    "question": "Please specify the technical host and processing site for data stores?",
-    "answer": "Windows / ASP.NET / IIS/ MS SQL server."
-  },
-  {
-    "question": "Please outline how test data in development and test environments is protected to the same standards as live data?",
-    "answer": "User passwords are encrypted at rest. The dev and test environments have access limited to necessary personnel only."
-  },
-  {
-    "question": "Is any manager data hosted externally? (If yes, please explain what data is hosted externally and how the data is managed and protected)?",
-    "answer": "Yes, the client provides APX Stream with information about its firm and products which is used by APX Stream to publish to consultant databases. The data is stored on APX Stream’s cloud platform in Dallas, Texas."
-  },
-  {
-    "question": "Is there any data export / import involved? (If yes, please explain what data is exported / imported, the routes used to transfer the data, and the methods used to transfer the data)?",
-    "answer": "Data can be imported and exported through spreadsheets. Data is published to consultant databases through APIs and other proprietary relationships."
-  },
-  {
-    "question": "Are there any keys / certificates involved? (If yes, please describe the purpose and how they are secured and are managed on an ongoing basis)?",
-    "answer": "Yes, for web application encryption. Keys / certificates never leave the server. The server has access limited to necessary personnel only."
-  },
-  {
-    "question": "Provide details on the network configuration required for the traffic flow between the client and the DataDrive?",
-    "answer": "Only the standard web ports 80/443."
-  },
-  {
-    "question": "Are there any certificates involved for establishing the trust relationship between the client and the external entity? (If yes, please explain who would provide the certificates, how these are managed, the lifetime of the certificates and the encryption used)?",
-    "answer": "No certificates are involved."
-  },
-  {
-    "question": "What type of events (e.g. network events, application events, system events, database events, middleware events) are logged / captured for monitoring and auditing?",
-    "answer": "Application / user activity and website events are logged."
-  },
-  {
-    "question": "Where are the logs stored and how is the access to logs controlled?",
-    "answer": "Logs are stored on the web server and database. Access is limited to necessary personnel only."
-  },
-  {
-    "question": "What monitoring and auditing capabilities are supported by the solution?",
-    "answer": "Auditing of user activity is supported."
-  },
-  {
-    "question": "Does the solution allow the SIEM tool integration (i.e. LogRhythm)? Or is there any customization to be done in order to integrate with the SIEM tool?",
-    "answer": "No, the solution does not allow SIEM tool integration."
-  },
-  {
-    "question": "What are the retention requirements for logs and audits?",
-    "answer": "There are no retention requirements for logs and audits."
-  },
-  {
-    "question": "Who (which teams) are responsible for logging, monitoring and auditing?",
-    "answer": "There are no requirements for logging, monitoring, and auditing."
-  },
-  {
-    "question": "How is the solution security patched and upgraded?",
-    "answer": "APX Stream uses continuous integration and automated controls to ensure software quality. Application is updated frequently."
-  },
-  {
-    "question": "What patches will the system require (Adobe, Microsoft, your company etc.) and how will they be communicated, obtained, and applied?",
-    "answer": "APX Stream does not require any client-furnished patches. Patches are applied automatically."
-  },
-  {
-    "question": "What is the licensing model (e.g. per user) and is there any distinction between a normal user and admin user from a licensing point of view?",
-    "answer": "The DataDrive fee is $250 per quarter. This fee includes unlimited number of users and unfettered user access. APX Stream does not charge on a per-user basis."
-  },
-  {
-    "question": "Who is the license approval authority?",
-    "answer": "APX Stream will generate user and administrator accounts at the request of the client."
-  },
-  {
-    "question": "Please outline your end-to-end Configuration and Change management process? (Please include an explanation of the Route to Live process and the release mechanism for all the components)?",
-    "answer": "APX Stream uses continuous integration and automated controls to ensure software quality. Application is updated frequently. Combination of code review and automated tools. All proposed code changes are tracked and approved by stakeholder team."
-  },
-  {
-    "question": "If your solution is Desktop installed, please confirm the installer package can be provided in either .MSI or .EXE formats for desktop applications?",
-    "answer": "The DataDrive is not Desktop installed."
-  },
-  {
-    "question": "Please provide evidence of any ISO27001 and SOC2 certifications Our hosting partner hold various certifications and can be provided?",
-    "answer": "See list and files submitted via zip folder along with this completed RFP:"
-  },
-  {
-    "question": "What are the different user interface/interaction channels? (E.g., desktop application, web browser, Excel add-in/plugin, command line/admin console, etc.)?",
-    "answer": "The user interface is web browser-based."
-  },
-  {
-    "question": "Briefly describe the access control features that are available within the service?",
-    "answer": "Users can be assigned granular permission the view / edit data sets."
-  },
-  {
-    "question": "Where open source components are involved, how is the change and release management for the open source component handled?",
-    "answer": "Open source components are updated as needed."
-  },
-  {
-    "question": "Could APX Stream provide the manager with support and assurances around the processes of security incident management, sharing information, incident response, and ongoing security management?",
-    "answer": "APX Stream tracks every incident and system test. If any issues arise affecting the client’s data security, The client will be immediately notified."
-  },
-  {
-    "question": "How is the very first Administrative User onboarded to the DataDrive so Admin user can then set up other users?",
-    "answer": "During the onboarding phase (and on an ongoing basis), APX Stream maintains an open, unfettered line of communication with the manager. The manager is made aware and kept in the loop along every phase of the onboarding process."
-  },
-  {
-    "question": "Is your solution hosted by your company (SaaS) or by The client?",
-    "answer": "SaaS"
-  },
-  {
-    "question": "If the solution is SaaS hosted?",
-    "answer": "Is there a dedicated infrastructure / shared tenant?\nThe DataDrive uses dedicated resources."
-  },
-  {
-    "question": "Are user-based components web-based or does it require any native desktop components?",
-    "answer": "User components are web-based."
-  },
-  {
-    "question": "Please describe the route to live for changes the manager makes to the DataDrive (e.g. configuration, code, UIs) including the use of any DEV / UAT instances and the promotion to production environments where relevant?",
-    "answer": "The client is not provided authorization to make changes to the DataDrive."
-  },
-  {
-    "question": "Please describe the role of administrator or support users and the common activity?",
-    "answer": "The client’s DataDrive Administrator has full control of all Users’ access for viewing and/or editing. The Administrator can grant or restrict user functions down to the vehicle and data set level."
-  },
-  {
-    "question": "Please describe any archiving and backup procedures of data and configurations?",
-    "answer": "The DataDrive is backed up daily."
-  },
-  {
-    "question": "Please describe the SLAs regarding the availability of the system?",
-    "answer": "APX Stream has a Master Agreement that covers what is traditionally contained in an SLA."
-  },
-  {
-    "question": "Please describe the capabilities regarding Disaster Recovery (‘DR’) scenarios where there is a failure or partial failure of the system?",
-    "answer": "Disaster recovery steps would be handled be APX Stream, restoring client data from backup files. This recovery procedure would normally take less than one day."
-  },
-  {
-    "question": "Please describe the data exchange formats / protocols (For example, HTTP REST, JSON, XML, etc)  Excel / XLSX / XLS?",
-    "answer": "The data exchange format is JSON"
-  },
-  {
-    "question": "Where will the data be hosted? Public cloud (Azure, AWS or Google) or private cloud?",
-    "answer": "The client’s data is hosted on a secure private cloud account."
-  },
-  {
-    "question": "What are the locations of the cloud datacenters that will be used to host client data?",
-    "answer": "Cloud data centers are located in Dallas, TX."
-  },
-  {
-    "question": "Does the solution involve privilege and non-privilege roles? If so, please provide information what these roles are and the roles description?",
-    "answer": "Administrator can access all functions within the application. Users can be assigned granular permission to view / edit data sets."
-  },
-  {
-    "question": "What encryption will be used for Data in transit?",
-    "answer": "TLS 1.2."
-  },
-  {
-    "question": "What data stores types will be used to store client data?",
-    "answer": "File and database stores are used to house client data."
-  },
-  {
-    "question": "Does your SaaS application require API integration with the client or other 3rd party applications?",
-    "answer": "The DataDrive does not require API integration, but it is API-enabled."
-  },
-  {
-    "question": "Provide a scenario and rationale why a 3rd party might require access to company data, as opposed to metadata or service operational data. What governance and oversight are provided?",
-    "answer": "APX Stream’s hosting partner may need access to resources to support the hosting environment as a normal part of doing business. No governance and oversight is provided to the client."
-  },
-  {
-    "question": "Is there a formal directive from the board of directors or senior management to maintain a formal Business Continuity Plan (BCP)?",
-    "answer": "APX Stream has a formal directive from senior management to maintain a formal BCP."
-  },
-  {
-    "question": "What actions or occurrence prompt updates or modifications to the plan? When was the last review or update to the BCP?",
-    "answer": "APX Stream’s BCP is to be reviewed annually. The plan would be updated in the event an unforeseen scenario transpired (either directly to APX Stream, or to a business with similar business fundamentals) that would make such an update a responsible business decision that protects client interests."
-  },
-  {
-    "question": "Please describe the team responsible for maintaining the BCP?",
-    "answer": "The BCP is under the purview of APX Stream’s President and Chief Operating Officer."
-  },
-  {
-    "question": "How often is the BCP tested and when was the last test of the BCP?",
-    "answer": "The BCP is tested every calendar year. The last test was in March 2020."
-  },
-  {
-    "question": "Briefly summarize the scenario used for recent testing or exercises that were performed. Was the test or exercise successful?",
-    "answer": "The last test was in March 2020, as COVID-19 became a pressing business concern. The plan was executed without incident and normal business operations were maintained."
-  },
-  {
-    "question": "Is there a formal directive from the board of directors or senior management to maintain a formal Disaster Recovery Plan (DRP)?",
-    "answer": "APX Stream has a formal directive from senior management to maintain a formal DRP."
-  },
-  {
-    "question": "Do you formally test your DRP? What is the testing cadence?",
-    "answer": "DRP assessments are conducted on a semi-annual basis and training discussions occur on a quarterly basis."
-  },
-  {
-    "question": "Do you have a formal Incident Response policy?",
-    "answer": "APX Stream’s executive management is trained regarding incident management policies, including reporting procedures."
-  },
-  {
-    "question": "Is your Incident Response policy tested (e.g., Tabletop Exercise)? What is the cadence of testing?",
-    "answer": "Testing on Incident Response is conducted on a yearly basis."
-  },
-  {
-    "question": "How many bug-fixes were applied to the DataDrive in each of the last two years, and in percentage terms, what proportion of the development resource was taken up by these tasks?",
-    "answer": "APX Stream has released code 736 times in the past two years as part of continuous development. This accounts for around half of our development resources."
-  },
-  {
-    "question": "What is the level of maintenance support required from the client staff, together with the skills required of them?",
-    "answer": "No support is required from APX Stream clients."
-  },
-  {
-    "question": "Is the supply and implementation of software upgrades to the DataDrive included in the annual maintenance charge?",
-    "answer": "Yes, APX Stream absorbs all development costs associated with the DataDrive."
-  },
-  {
-    "question": "Please outline the procedures regarding the following?",
-    "answer": "Announcement of new releases\nAPX Stream announces new releases via a combination of email, phone calls and quarterly newsletter."
-  },
-  {
-    "question": "What is APX Stream’s policy regarding the software remaining compatible with the software environment?",
-    "answer": "The APX Stream solution is web-based and browser-accessed. As such, there is no policy regarding the software’s compatibility with the software environment."
-  },
-  {
-    "question": "If the software environment is changed, please state the normal timescale required to make software compatible?",
-    "answer": "The APX Stream solution is web-based and browser-accessed and as such does not have a normal timescale required to make software compatible with a change in the software environment."
-  },
-  {
-    "question": "Are there any conditions that would lead to withdrawal of APX Stream’s support services?",
-    "answer": "Possible conditions are, but not limited to: breaching of the NDA, hiring of any current or past employee, using APX Stream’s proprietary software or code for personal benefit or profit."
+    "question": "H.7\tAre there any conditions that would lead to withdrawal of your company’s support services?",
+    "answer": ""
   }
 ]

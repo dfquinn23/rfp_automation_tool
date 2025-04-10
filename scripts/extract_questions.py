@@ -50,7 +50,7 @@ def extract_questions_from_docx(folder_path):
 
 # single document extraction:
 if __name__ == "__main__":
-    file_path = "C:/Users/Daniel Quinn/Desktop/AI Consultancy Project/rfp_assistant/new_rfps/new_incoming_sample_rfp_1.docx"
+    file_path = "C:/Users/Daniel Quinn/Desktop/AI_Consultancy_Project/rfp_assistant/rfp_automation_tool/new_rfps/new_incoming_sample_rfp_1.docx"
 
     if not os.path.exists(file_path):
         print(f"File not found: {file_path}")
