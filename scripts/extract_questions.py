@@ -4,8 +4,8 @@ import sys
 import json
 
 
-def extract_questions_from_docx(folder_path):
-    doc = Document(folder_path)
+def extract_questions_from_docx(file_path):
+    doc = Document(file_path)
     questions = []
 
     for para in doc.paragraphs:
@@ -15,55 +15,57 @@ def extract_questions_from_docx(folder_path):
 
     return questions
 
+
 # Below is the looped code for extracting questions from a group of docs
-# if __name__ == "__main__":
-#     if len(sys.argv) < 2:
-#         print("Usage: python extract_questions.py <path_to_doc>")
-#         sys.exit(1)
+if __name__ == "__main__":
+    # if len(sys.argv) < 2:
+    #     print("Usage: python extract_questions.py <path_to_doc>")
+    #     sys.exit(1)
 
-#     folder_path = sys.argv[1]
+    folder_path = "new_rfps"
 
-#     if not os.path.exists(folder_path):
-#         print("File not found: {folder_path}")
-#         sys.exit(1)
+    if not os.path.exists(folder_path):
+        print("File not found: {folder_path}")
+        sys.exit(1)
 
-#     extracted_data = {}
+    extracted_data = {}
 
-#     for filename in os.listdir(folder_path):
-#         if filename.endswith(".docx"):
-#             file_path = os.path.join(folder_path, filename)
-#             questions = extract_questions_from_docx(file_path)
-#             if questions:
-#                 extracted_data[filename] = questions
-#                 print(f"\n✅ {filename}: {len(questions)} questions extracted")
-#             else:
-#                 print(f"\n⚠️ {filename}: No questions found")
+    for filename in os.listdir(folder_path):
+        if filename.endswith(".docx"):
+            file_path = os.path.join(folder_path, filename)
+            print(f" Processing: {filename}")
+            questions = extract_questions_from_docx(file_path)
+            if questions:
+                extracted_data[filename] = questions
+                print(f"\n✅ Found {len(questions)} questions")
+            else:
+                print(f"\n⚠️ {filename}: No questions found")
 
-#     output_path = os.path.join("output", "extracted_questions.json")
-#     os.makedirs("output", exist_ok=True)
+    output_path = os.path.join("output", "extracted_questions.json")
+    os.makedirs("output", exist_ok=True)
 
-#     with open(output_path, "w", encoding="utf-8") as f:
-#         json.dump(extracted_data, f, indent=2, ensure_ascii=False)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(extracted_data, f, indent=2, ensure_ascii=False)
 
-#     print(f"\n📝 All questions saved to: {output_path}")
+    print(f"\n📝 All questions saved to: {output_path}")
 
 
 # single document extraction:
-if __name__ == "__main__":
-    file_path = "C:/Users/Daniel Quinn/Desktop/AI_Consultancy_Project/rfp_assistant/rfp_automation_tool/new_rfps/new_incoming_sample_rfp_1.docx"
+# if __name__ == "__main__":
+#     file_path = "C:/Users/Daniel Quinn/Desktop/AI_Consultancy_Project/rfp_assistant/rfp_automation_tool/new_rfps/new_incoming_sample_rfp_1.docx"
 
-    if not os.path.exists(file_path):
-        print(f"File not found: {file_path}")
-        sys.exit(1)
+#     if not os.path.exists(file_path):
+#         print(f"File not found: {file_path}")
+#         sys.exit(1)
 
-    questions = extract_questions_from_docx(file_path)
+#     questions = extract_questions_from_docx(file_path)
 
     # save output
     os.makedirs("output", exist_ok=True)
     output_path = os.path.join("output", "extracted_questions.json")
 
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump({os.path.basename(file_path): questions}, f, indent=2)
+        json.dump(extracted_data, f, indent=2, ensure_ascii=False)
 
     print(f"✅ Extracted {len(questions)} questions")
     print(f"📝 Saved to{output_path} ")

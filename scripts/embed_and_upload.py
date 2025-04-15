@@ -59,7 +59,14 @@ points = []
 for pair in qa_pairs:
     question = pair["question"]
     answer = pair["answer"]
+    if not answer.strip():
+        print(f"⚠️ Skipping empty answer: {question[:60]}")
+        continue
+
     vector = get_embedding(answer)
+    if not vector:
+        print(f"❌ Failed to get embedding for: {question[:60]}")
+        continue
 
     point = PointStruct(
         id=str(uuid.uuid4()),
