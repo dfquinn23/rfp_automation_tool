@@ -4,6 +4,7 @@ from docx import Document
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import SearchParams
 from generate_drafts import generate_draft_answer
+from qa_generation import generate_reviewable_draft
 from dotenv import load_dotenv
 import requests
 
@@ -65,8 +66,10 @@ for filename, questions in all_questions.items():
             question, top_answers, model=OLLAMA_MODEL, extra_instruction=PROMPT_C_INSTRUCTION)
 
         # add to document
-        doc.add_paragraph(f"Q{i}. {question}", style="List Number")
-        doc.add_paragraph(draft)
+        result = generate_reviewable_draft(question)
+
+        doc.add_paragraph(f"Q{i}. {result['question']}", style="List Number")
+        doc.add_paragraph(result['draft'])
         doc.add_paragraph("")  # spacing
 
 doc.save(OUTPUT_DOCX_PATH)
