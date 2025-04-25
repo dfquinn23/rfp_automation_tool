@@ -1,4 +1,6 @@
 # core/generate.py
+import os
+import openai
 import requests
 import json
 from openai import OpenAI
@@ -10,6 +12,14 @@ from core.config import (
 )
 
 client = OpenAI(api_key=OPENAI_API_KEY)
+
+
+try:
+    client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    print("[DEBUG] Connected to OpenAI")
+except Exception as e:
+    print(f"[ERROR] OpenAI connection failed: {e}")
+    raise
 
 
 def generate_draft_answer_openai(question, top_answers, model=OPENAI_GENERATION_MODEL):

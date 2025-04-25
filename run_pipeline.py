@@ -10,27 +10,33 @@ from core.embed import embed_text
 from core.search import search_qdrant
 from core.generate import generate_draft_answer
 from core.logger import log_result
+from dotenv import load_dotenv
+
+env_path = os.path.join(os.path.dirname(__file__), "..", ".env")
+load_dotenv(dotenv_path=env_path)
+print("[DEBUG] QDRANT_CLUSTER_URL =", os.getenv("QDRANT_CLUSTER_URL"))
+print("[DEBUG] QDRANT_API_KEY =", os.getenv("QDRANT_API_KEY"))
 
 
 def run_pipeline(input_path):
-    print(f"\n📥 Loading RFP: {input_path}")
+    print(f"\n[-->] Loading RFP: {input_path}")
     questions = extract_questions_from_docx(input_path)
     if not questions:
-        print("❌ No valid questions found.")
+        print("X No valid questions found.")
         return
 
     print(
-        f"✅ Extracted {len(questions)} questions. Starting draft generation...\n")
+        f"Extracted {len(questions)} questions. Starting draft generation...\n")
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     full_doc = Document()
     full_doc.add_heading("RFP Draft Responses", level=1)
 
     review_doc = Document()
-    review_doc.add_heading("⚠ Needs Review", level=1)
+    review_doc.add_heading("[!] Needs Review", level=1)
 
     for i, question in enumerate(questions, 1):
-        print(f"🔍 Q{i}: {question}")
+        print(f"Q{i}: {question}")
 
         vector = embed_text(question)
         results = search_qdrant(vector)
@@ -41,7 +47,7 @@ def run_pipeline(input_path):
 
         needs_review = top_score < REVIEW_SCORE_THRESHOLD
         if needs_review:
-            draft = f"[⚠ Needs review]\n{draft}"
+            draft = f"[[!] Needs review]\n{draft}"
 
         log_result({
             "question": question,
@@ -73,12 +79,12 @@ def run_pipeline(input_path):
 
     full_path = os.path.join(OUTPUT_DIR, "generated_rfp_draft.docx")
     full_doc.save(full_path)
-    print(f"📄 Full draft saved to: {full_path}")
+    print(f"Full draft saved to: {full_path}")
 
     if review_doc.paragraphs:
         review_path = os.path.join(OUTPUT_DIR, "low_confidence_rfp_draft.docx")
         review_doc.save(review_path)
-        print(f"⚠ Low-confidence draft saved to: {review_path}")
+        print(f"[!] Low-confidence draft saved to: {review_path}")
 
 
 if __name__ == "__main__":
