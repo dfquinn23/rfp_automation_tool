@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from qdrant_client import QdrantClient  # <-- NEW
 
 load_dotenv()
 
@@ -18,3 +19,9 @@ USE_OPENAI = True
 # Paths
 LOG_DIR = "logs"
 OUTPUT_DIR = "output"
+
+# 💬 Qdrant client (NEW)
+client = QdrantClient(
+    url=QDRANT_CLUSTER_URL,
+    api_key=QDRANT_API_KEY,
+)

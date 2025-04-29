@@ -8,10 +8,28 @@ from core.config import (
     OLLAMA_GENERATION_MODEL,
     OPENAI_API_KEY,
     OPENAI_GENERATION_MODEL,
+    OLLAMA_EMBEDDING_MODEL,
     USE_OPENAI
 )
 
 client = OpenAI(api_key=OPENAI_API_KEY)
+
+
+def get_embedding(text: str, use_openai: bool = USE_OPENAI) -> list:
+    if use_openai:
+        client = openai.OpenAI(api_key=OPENAI_API_KEY)
+        response = client.embeddings.create(
+            # or you can dynamically pull from OPENAI_MODEL_NAME if you want
+            model="text-embedding-ada-002",
+            input=text,
+        )
+        return response.data[0].embedding
+    else:
+        response = requests.post(
+            "http://localhost:11434/api/embeddings",
+            json={"model": OLLAMA_EMBEDDING_MODEL, "prompt": text}
+        )
+        return response.json()["embedding"]
 
 
 try:
