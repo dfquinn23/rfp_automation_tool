@@ -1,3 +1,4 @@
+import shutil
 import os
 import uuid
 import requests
@@ -50,3 +51,14 @@ def embed_text(text: str, model: str = "nomic-embed-text"):
         json={"model": model, "prompt": text}
     )
     return response.json()["embedding"]
+
+
+def save_final_rfp(file_path):
+    """
+    Save the finalized RFP document into the 'past_rfps/' folder.
+    """
+    dest_dir = "past_rfps"
+    os.makedirs(dest_dir, exist_ok=True)
+    dest_path = os.path.join(dest_dir, os.path.basename(file_path))
+    shutil.copy(file_path, dest_path)
+    print(f"✅ Final RFP saved to {dest_path}")

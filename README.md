@@ -20,3 +20,53 @@ rfp_automation_tool/
 ├── output/                  ← generated docx files
 ├── logs/                    ← JSONL logs for audit/review
 └── requirements.txt
+
+# RFP Automation Tool
+
+## 📄 Overview
+
+The RFP Automation Tool streamlines the process of responding to RFPs by combining AI-based draft generation, human review, and final archiving.  
+It features an intuitive Streamlit interface, low-code automation via n8n, and secure vector storage using Qdrant.
+
+This tool is designed to help investment management firms and service providers reduce time, errors, and repetitive effort when completing new RFPs.
+
+---
+
+## 🚀 Features
+
+- Upload a new RFP (.docx format)
+- Auto-generate draft responses using LLM models
+- Download full and low-confidence draft versions for review
+- Upload final reviewed RFPs
+- Archive and vectorize final RFPs for future searchability (Qdrant)
+- Browse and download archived past RFPs
+- Clean, client-ready Streamlit interface
+
+---
+
+## 🛠️ Technology Stack
+
+- **Python** (core application)
+- **Streamlit** (user interface)
+- **n8n** (workflow automation)
+- **Qdrant** (vector database for RFP storage and retrieval)
+- **Docx** (Word document handling)
+- **OpenAI API / Ollama** (for AI text generation) [adjust depending on your LLM setup]
+
+---
+
+## 📂 Project Structure
+
+```plaintext
+rfp_automation_tool/
+│
+├── core/            # Core logic (embedding, generation, config)
+├── new_rfps/        # Temporary uploads of new RFPs
+├── output/          # Generated drafts and low-confidence drafts
+├── past_rfps/       # Finalized, archived RFPs
+├── scripts/         # Optional scripts (if any)
+├── run_pipeline.py  # Main pipeline controller
+├── ui_streamlit.py  # Streamlit application
+├── .env             # API keys and environment configs (not public)
+└── README.md        # Project documentation (this file)
+

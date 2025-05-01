@@ -40,7 +40,10 @@ def run_pipeline(input_path):
 
         vector = embed_text(question)
         results = search_qdrant(vector)
-        top_answers = [r.payload["answer"] for r in results]
+        # top_answers = [r.payload["answer"] for r in results]
+        top_answers = [r.payload.get("answer", "[⚠ Missing answer]")
+                       for r in results if "answer" in r.payload]
+
         top_score = results[0].score if results else 0
 
         draft = generate_draft_answer(question, top_answers)
