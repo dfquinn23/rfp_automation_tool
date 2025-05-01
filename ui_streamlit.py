@@ -88,6 +88,21 @@ st.markdown(
     padding-left: 16px;
 }
 
+/* Sidebar dropdown (selectbox) text color fix */
+    section[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] {
+    font-family: 'Roboto', sans-serif !important, color: #0A2540 !important;  /* dark blue */
+}
+/* Fix sidebar selectbox dropdown list items (when open) */
+div[data-baseweb="popover"] ul {
+    background-color: white !important;
+}
+
+div[data-baseweb="popover"] li {
+    color: #0A2540 !important;  /* dark blue text */
+    font-family: 'Roboto', sans-serif !important;
+}
+
+
     </style>
     """,
     unsafe_allow_html=True
