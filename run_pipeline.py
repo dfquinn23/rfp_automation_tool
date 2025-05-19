@@ -40,6 +40,10 @@ def run_pipeline(input_path):
 
         vector = embed_text(question)
         results = search_qdrant(vector)
+        print(f"[DEBUG] Question: {question}")
+        for i, r in enumerate(results):
+            print(f"[DEBUG] Match {i+1}: score={r.score:.3f}, answer={r.payload.get('answer', '⚠ Missing')[:200]}")
+
         # top_answers = [r.payload["answer"] for r in results]
         top_answers = [r.payload.get("answer", "[⚠ Missing answer]")
                        for r in results if "answer" in r.payload]

@@ -19,25 +19,30 @@ def embed_final_rfp(file_path):
     """
     Load a final RFP draft from DOCX, create embeddings for each paragraph, and upload to Qdrant.
     """
-    # Load final draft
-    doc = Document(file_path)
+    from docx import Document
+    from core.generate import get_embedding  # if not already imported
+    from qdrant_client.models import PointStruct
 
+    doc = Document(file_path)
     points = []
+
     for para in doc.paragraphs:
         question = para.text.strip()
         if not question:
-            continue  # skip empty lines
+            continue
 
         vector = get_embedding(question, use_openai=False)
 
         point = PointStruct(
             id=str(uuid.uuid4()),
             vector=vector,
-            payload={"source": os.path.basename(file_path)}
+            payload={
+                "source": os.path.basename(file_path),
+                "answer": question
+            }
         )
         points.append(point)
 
-    # Upload all points
     client.upsert(collection_name=COLLECTION_NAME, points=points)
     print(f"✅ Final draft '{file_path}' vectorized and uploaded to Qdrant.")
 
