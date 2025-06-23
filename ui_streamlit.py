@@ -110,7 +110,8 @@ div[data-baseweb="popover"] li {
 
 
 # Add logo (optional)
-st.image("C:\\Users\\Daniel Quinn\\Desktop\\AI_Consultancy_Project\\rfp_assistant\\rfp_automation_tool\\fulllogo_transparent_nobuffer.png", width=200)
+# old:  st.image("C:\\Users\\Daniel Quinn\\Desktop\\AI_Consultancy_Project\\rfp_assistant\\rfp_automation_tool\\fulllogo_transparent_nobuffer.png", width=200)
+st.image("fulllogo_transparent_nobuffer.png", width=200)
 
 # Paths
 NEW_RFPS_DIR = "new_rfps"
