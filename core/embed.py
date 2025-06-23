@@ -5,7 +5,7 @@ import os
 import uuid
 from docx import Document
 from qdrant_client import QdrantClient
-from qdrant_client.models import PointStruct
+from qdrant_client.models import PointStruct, VectorParams, Distance
 from core.generate import get_embedding
 from core.config import (
     QDRANT_API_KEY,
@@ -19,11 +19,30 @@ client = QdrantClient(
     api_key=QDRANT_API_KEY,
 )
 
+# Recreate collection to ensure correct vector size and distance
+
+
+def ensure_correct_collection():
+    try:
+        client.recreate_collection(
+            collection_name=COLLECTION_NAME,
+            vectors_config=VectorParams(
+                size=1536,  # required by text-embedding-3-small
+                distance=Distance.COSINE
+            )
+        )
+        print(
+            f"[INFO] Collection '{COLLECTION_NAME}' recreated with dim=1536.")
+    except Exception as e:
+        print(f"[WARNING] Could not recreate collection: {e}")
+
 
 def embed_final_rfp(file_path):
     """
     Load a final RFP draft from DOCX, create embeddings for each paragraph, and upload to Qdrant.
     """
+    ensure_correct_collection()
+
     doc = Document(file_path)
     points = []
 
@@ -48,6 +67,7 @@ def embed_final_rfp(file_path):
             collection_name=COLLECTION_NAME,
             points=points
         )
+        print(f"[INFO] Uploaded {len(points)} points to Qdrant.")
 
 
 # LOCAL ONLY
