@@ -6,7 +6,8 @@ from docx.shared import Pt
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from core.config import OUTPUT_DIR, REVIEW_SCORE_THRESHOLD
 from core.extract import extract_questions_from_docx
-from core.embed import embed_text
+# from core.embed import embed_text
+from core.generate import get_embedding
 from core.search import search_qdrant
 from core.generate import generate_draft_answer
 from core.logger import log_result
@@ -38,11 +39,12 @@ def run_pipeline(input_path):
     for i, question in enumerate(questions, 1):
         print(f"Q{i}: {question}")
 
-        vector = embed_text(question)
+        vector = get_embedding(question)
         results = search_qdrant(vector)
         print(f"[DEBUG] Question: {question}")
         for i, r in enumerate(results):
-            print(f"[DEBUG] Match {i+1}: score={r.score:.3f}, answer={r.payload.get('answer', '⚠ Missing')[:200]}")
+            print(
+                f"[DEBUG] Match {i+1}: score={r.score:.3f}, answer={r.payload.get('answer', '⚠ Missing')[:200]}")
 
         # top_answers = [r.payload["answer"] for r in results]
         top_answers = [r.payload.get("answer", "[⚠ Missing answer]")
