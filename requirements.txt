@@ -1,0 +1,26 @@
+# Core Streamlit app
+streamlit
+
+# DOCX parsing
+python-docx
+
+# Environment variable management
+python-dotenv
+
+# Qdrant client for vector database
+qdrant-client
+
+# OpenAI API for LLM usage
+openai
+
+# Word document formatting
+python-docx
+
+# General-purpose utilities (optional but likely useful)
+tqdm
+
+# Logging and structured output (if used)
+loguru
+
+# Just in case you're using structured typing
+pydantic
