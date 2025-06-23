@@ -70,3 +70,9 @@ rfp_automation_tool/
 ├── .env             # API keys and environment configs (not public)
 └── README.md        # Project documentation (this file)
 
+After adding or updating files in `past_rfps/`, rebuild the Qdrant database by running:
+
+```bash
+python scripts/rebuild_qdrant_db.py
+```
+
