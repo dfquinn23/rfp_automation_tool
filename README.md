@@ -69,4 +69,16 @@ rfp_automation_tool/
 ├── ui_streamlit.py  # Streamlit application
 ├── .env             # API keys and environment configs (not public)
 └── README.md        # Project documentation (this file)
+```
 
+## 🔐 Streamlit Cloud Secrets
+
+When deploying on Streamlit Cloud, set the following keys in your app's
+Secrets manager:
+
+- `OPENAI_API_KEY`
+- `QDRANT_API_KEY`
+- `QDRANT_CLUSTER_URL`
+
+These values are accessed via `st.secrets.get()` with environment variables as
+fallbacks for local development.
