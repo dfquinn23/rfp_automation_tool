@@ -1,8 +1,6 @@
 # rfp_automation_tool
 RFP Tool Prototype
 
-
-
 rfp_automation_tool/
 ├── app/                     ← (streamlit app will live here)
 ├── core/                    ← core reusable logic
@@ -69,10 +67,3 @@ rfp_automation_tool/
 ├── ui_streamlit.py  # Streamlit application
 ├── .env             # API keys and environment configs (not public)
 └── README.md        # Project documentation (this file)
-
-After adding or updating files in `past_rfps/`, rebuild the Qdrant database by running:
-
-```bash
-python scripts/rebuild_qdrant_db.py
-```
-
