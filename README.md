@@ -1,8 +1,6 @@
 # rfp_automation_tool
 RFP Tool Prototype
 
-
-
 rfp_automation_tool/
 ├── app/                     ← (streamlit app will live here)
 ├── core/                    ← core reusable logic
@@ -69,38 +67,3 @@ rfp_automation_tool/
 ├── ui_streamlit.py  # Streamlit application
 ├── .env             # API keys and environment configs (not public)
 └── README.md        # Project documentation (this file)
-
-## 🔑 Configuration
-
-Create a `.streamlit/secrets.toml` file and provide your API keys:
-
-```toml
-OPENAI_API_KEY = "your-openai-key"
-QDRANT_API_KEY = "your-qdrant-key"
-QDRANT_CLUSTER_URL = "https://<cluster-id>.cloud.qdrant.io"
-```
-
-Streamlit loads these secrets automatically when running the app or any
-script that imports `streamlit`.
-
-## ▶️ Running the App
-
-Install the requirements and launch Streamlit:
-
-```bash
-pip install -r requirements.txt
-streamlit run ui_streamlit.py
-```
-
-## 🛠 Rebuilding the Qdrant Database
-
-Use the helper script to wipe and rebuild the vector collection from all
-documents in `past_rfps/`:
-
-```bash
-python scripts/rebuild_qdrant_db.py
-```
-
-This removes any existing vectors and re-embeds each paragraph from the
-archived RFPs.
-
