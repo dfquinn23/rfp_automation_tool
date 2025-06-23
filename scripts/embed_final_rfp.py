@@ -16,7 +16,7 @@ load_dotenv()
 def get_embedding(text):
     response = requests.post(
         "http://localhost:11434/api/embeddings",
-        json={"modsel": OLLAMA_EMBEDDING_MODEL, "prompt": text}
+        json={"model": OLLAMA_EMBEDDING_MODEL, "prompt": text}
     )
     return response.json()["embedding"]
 
@@ -27,12 +27,15 @@ def extract_qa_from_docx(file_path):
     paras = [p.text.strip() for p in doc.paragraphs if p.text.strip()]
     i = 0
     while i < len(paras):
-        if paras(i).endswith("?"):
+        if paras[i].endswith("?"):
             question = paras[i]
-            answer = paras[i+1] if i+1 < len(paras) else ""
+            answer = paras[i+1] if i + 1 < len(paras) else ""
             qa_pairs.append({"question": question, "answer": answer})
+            i += 2
+        else:
             i += 1
-        return qa_pairs
+
+    return qa_pairs
 
 
 def embed_and_upload_final(file_path):
