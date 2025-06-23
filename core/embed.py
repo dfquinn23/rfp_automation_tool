@@ -41,7 +41,6 @@ def embed_final_rfp(file_path):
     """
     Load a final RFP draft from DOCX, create embeddings for each paragraph, and upload to Qdrant.
     """
-    ensure_correct_collection()
 
     doc = Document(file_path)
     points = []
