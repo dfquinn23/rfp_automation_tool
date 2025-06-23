@@ -41,19 +41,19 @@ def run_pipeline(input_path):
 
         vector = get_embedding(question)
         results = search_qdrant(vector)
-        print(f"[DEBUG] Question: {question}")
-        for i, r in enumerate(results):
-            print(
-                f"[DEBUG] Match {i+1}: score={r.score:.3f}, answer={r.payload.get('answer', '⚠ Missing')[:200]}")
 
-        # top_answers = [r.payload["answer"] for r in results]
+        if not results:
+            print("⚠ No results returned from Qdrant.")
+        else:
+            for j, r in enumerate(results):
+                print(f"[Match {j+1}] Score: {r.score:.3f}")
+                print(f"Text: {r.payload.get('text', '')[:100]}")
+
         top_answers = [r.payload.get("answer", "[⚠ Missing answer]")
                        for r in results if "answer" in r.payload]
-
         top_score = results[0].score if results else 0
 
         draft = generate_draft_answer(question, top_answers)
-
         needs_review = top_score < REVIEW_SCORE_THRESHOLD
         if needs_review:
             draft = f"[[!] Needs review]\n{draft}"
@@ -66,7 +66,6 @@ def run_pipeline(input_path):
             "draft": draft
         })
 
-        # Format question in bold with spacing
         p_q = full_doc.add_paragraph()
         run_q = p_q.add_run(f"Q{i}: {question}")
         run_q.bold = True

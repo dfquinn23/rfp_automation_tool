@@ -7,14 +7,17 @@ from core.config import QDRANT_CLUSTER_URL, QDRANT_API_KEY, COLLECTION_NAME
 client = QdrantClient(url=QDRANT_CLUSTER_URL, api_key=QDRANT_API_KEY)
 
 
-def search_qdrant(vector, limit=3):
-    return client.search(
+def search_qdrant(vector, limit=5, min_score=0.3):
+    results = client.search(
         collection_name=COLLECTION_NAME,
         query_vector=vector,
         limit=limit,
         with_payload=True,
         search_params=SearchParams(hnsw_ef=128)
     )
+
+    # Optional: filter low-score results
+    return [r for r in results if r.score >= min_score]
 
 
 try:
