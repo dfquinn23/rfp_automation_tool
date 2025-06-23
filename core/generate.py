@@ -4,6 +4,8 @@
 import os
 import streamlit as st
 from openai import OpenAI
+from qdrant_client.http.models import ScoredPoint  # if needed for type hint
+
 
 # Load from Streamlit secrets or fallback to env for local dev
 OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY"))
@@ -27,6 +29,29 @@ def get_embedding(text: str) -> list:
         return response.data[0].embedding
     except Exception as e:
         raise RuntimeError(f"OpenAI embedding failed: {e}")
+
+
+def generate_draft_answer(question: str, retrieved_context: list) -> str:
+    """
+    Generate a draft RFP answer by combining the top-matched Qdrant responses.
+
+    Args:
+        question: The RFP question.
+        retrieved_context: List of Qdrant search results (with `.payload["answer"]`).
+
+    Returns:
+        Draft answer as a string.
+    """
+    base_answer = ""
+    for i, item in enumerate(retrieved_context):
+        answer_piece = item.payload.get("answer", "").strip()
+        if answer_piece:
+            base_answer += f"[Source {i+1}] {answer_piece}\n\n"
+
+    if not base_answer:
+        return "[⚠ Needs review] No confident matches found."
+
+    return base_answer.strip()
 
 
 # LOCAL ONLY
