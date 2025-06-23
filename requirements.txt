@@ -13,8 +13,8 @@ qdrant-client
 # OpenAI API for LLM usage
 openai
 
-# Word document formatting
-python-docx
+# HTTP requests
+requests
 
 # General-purpose utilities (optional but likely useful)
 tqdm
