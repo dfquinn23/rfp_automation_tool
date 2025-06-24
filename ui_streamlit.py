@@ -3,6 +3,7 @@
 # ui_streamlit.py (Final, Cleaned Version)
 
 import streamlit as st
+import requests
 from tempfile import NamedTemporaryFile
 from run_pipeline import run_pipeline
 from core.embed import embed_final_rfp
@@ -127,7 +128,56 @@ elif page == "View Past RFPs":
                 st.download_button(
                     f"⬇️ Download {rfp_file}", f, file_name=rfp_file
                 )
+# Your n8n Cloud webhook URL for the 'new_draft_ready' trigger.
+N8N_WEBHOOK_URL = "https://dfq23.app.n8n.cloud/webhook/5177ed66-1297-48d6-979a-6c7232559cbd"
 
+
+def trigger_new_draft_notification(data_to_send=None):
+    """
+    Triggers the 'New Draft Ready' n8n workflow with an optional data payload.
+
+    Args:
+        data_to_send (dict, optional): A dictionary of data to send to the workflow.
+                                     This is useful for personalizing emails.
+                                     Defaults to None.
+
+    Returns:
+        bool: True if the webhook was triggered successfully, False otherwise.
+    """
+    try:
+        # Send the data to your n8n webhook
+        response = requests.post(N8N_WEBHOOK_URL, json=data_to_send)
+
+        # This will raise an exception for bad responses (like 404 or 500)
+        response.raise_for_status()
+
+        st.success("Successfully notified the team that a new draft is ready!")
+        return True
+
+    except requests.exceptions.RequestException as e:
+        st.error(f"An error occurred while triggering the notification: {e}")
+        return False
+
+# --- Example of how to use this in your Streamlit app ---
+
+
+st.title("Document Collaboration Tool")
+
+st.write("When the draft is prepared and ready for review, click the button below.")
+
+if st.button("Notify Team: New Draft is Ready"):
+    # You can customize the data you send to n8n here.
+    # This data will be available in your n8n workflow to use in emails,
+    # Slack messages, etc.
+    draft_details = {
+        "document_name": "New RFP Completed",
+        "author": "Dan Quinn",
+        "status": "Ready for Review",
+        "version": "1.0"
+    }
+
+    # Call the function to trigger the webhook
+    trigger_new_draft_notification(draft_details)
 
 # # LOCAL ONLY
 # # ui_streamlit.py
