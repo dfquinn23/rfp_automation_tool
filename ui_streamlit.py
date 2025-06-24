@@ -68,7 +68,65 @@ if page == "Process New RFP":
                                 "⬇️ Download Low-Confidence Draft", f, file_name="low_confidence_rfp_draft.docx"
                             )
                 except Exception as e:
-                    st.error(
+                    st.error(f"❌ An error occurred during processing: {e}")
+                finally:
+                    # Securely clean up the temporary file
+                    if os.path.exists(tmp_path):
+                        os.unlink(tmp_path)
+
+    st.markdown("---")  # Visual separator
+
+    st.header("2. Archive a Finalized RFP")
+    st.write(
+        "Upload a final, human-reviewed RFP to add it to the knowledge base for future searches.")
+    final_uploaded_file = st.file_uploader(
+        "Upload your final .docx draft", type="docx", key="final_rfp_upload")
+
+    if final_uploaded_file:
+        with NamedTemporaryFile(delete=False, suffix=".docx") as final_tmp:
+            final_tmp.write(final_uploaded_file.getbuffer())
+            final_tmp_path = final_tmp.name
+
+        if st.button("Add to Knowledge Base"):
+            with st.spinner("Vectorizing and saving final draft..."):
+                try:
+                    embed_final_rfp(final_tmp_path)
+                    st.success(
+                        "🧠 Final RFP added to the Qdrant knowledge base successfully!")
+
+                    # Also save a copy to the local archive folder
+                    os.makedirs(PAST_RFPS_DIR, exist_ok=True)
+                    final_save_path = os.path.join(
+                        PAST_RFPS_DIR, final_uploaded_file.name)
+                    shutil.copy(final_tmp_path, final_save_path)
+                    st.info(
+                        f"✅ Copied final draft to local '{PAST_RFPS_DIR}' folder.")
+                except Exception as e:
+                    st.error(f"❌ Error during final draft processing: {e}")
+                finally:
+                    if os.path.exists(final_tmp_path):
+                        os.unlink(final_tmp_path)
+
+
+# --- Page 2: View Past RFPs ---
+elif page == "View Past RFPs":
+
+    st.header("🗂️ Past RFPs Archive")
+    st.write("Download previously archived RFP documents.")
+
+    os.makedirs(PAST_RFPS_DIR, exist_ok=True)
+    rfp_files = [f for f in os.listdir(PAST_RFPS_DIR) if f.endswith(".docx")]
+
+    if not rfp_files:
+        st.info(
+            f"No archived RFPs found in the '{PAST_RFPS_DIR}' directory yet.")
+    else:
+        for rfp_file in rfp_files:
+            rfp_path = os.path.join(PAST_RFPS_DIR, rfp_file)
+            with open(rfp_path, "rb") as f:
+                st.download_button(
+                    f"⬇️ Download {rfp_file}", f, file_name=rfp_file
+                )
 
 
 # # LOCAL ONLY
