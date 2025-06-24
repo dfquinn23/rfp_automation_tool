@@ -8,7 +8,7 @@ python-docx
 python-dotenv
 
 # Qdrant client for vector database
-qdrant-client
+qdrant-client==1.9.0
 
 # OpenAI API for LLM usage
 openai
