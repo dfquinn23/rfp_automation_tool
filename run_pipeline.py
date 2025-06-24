@@ -36,35 +36,54 @@ def run_pipeline(input_path):
     review_doc = Document()
     review_doc.add_heading("[!] Needs Review", level=1)
 
-    for i, question in enumerate(questions, 1):
-        print(f"Q{i}: {question}")
+   # ADD THIS NEW, CORRECTED BLOCK in run_pipeline.py
+for i, question in enumerate(questions, 1):
+    print(f"Q{i}: {question}")
 
-        vector = get_embedding(question)
-        results = search_qdrant(vector)
+    vector = get_embedding(question)
+    results = search_qdrant(vector)  # results is a list of ScoredPoint objects
 
-        if not results:
-            print("⚠ No results returned from Qdrant.")
-        else:
-            for j, r in enumerate(results):
-                print(f"[Match {j+1}] Score: {r.score:.3f}")
-                print(f"Text: {r.payload.get('text', '')[:100]}")
+    # Let the generate_draft_answer function handle the results directly
+    draft = generate_draft_answer(question, results)
 
-        top_answers = [r.payload.get("answer", "[⚠ Missing answer]")
-                       for r in results if "answer" in r.payload]
-        top_score = results[0].score if results else 0
+    # Check the score of the top result to see if it needs review
+    top_score = results[0].score if results else 0.0
+    needs_review = top_score < REVIEW_SCORE_THRESHOLD
 
-        draft = generate_draft_answer(question, top_answers)
-        needs_review = top_score < REVIEW_SCORE_THRESHOLD
-        if needs_review:
-            draft = f"[[!] Needs review]\n{draft}"
+    # Prepend the "Needs review" flag here if necessary
+    if not results or needs_review:
+        draft = f"[⚠ Needs review | Top Score: {top_score:.2f}]\n{draft}"
 
-        log_result({
-            "question": question,
-            "top_score": top_score,
-            "needs_review": needs_review,
-            "top_answers": top_answers,
-            "draft": draft
-        })
+    # Log the results for auditing
+    log_result({
+        "question": question,
+        "top_score": top_score,
+        "needs_review": needs_review,
+        # Log the full payload
+        "top_answers_payload": [r.payload for r in results],
+        "draft": draft
+    })
+
+    # Add the question and the generated draft to the document
+    p_q = full_doc.add_paragraph()
+    run_q = p_q.add_run(f"Q{i}: {question}")
+    run_q.bold = True
+    run_q.font.size = Pt(11)
+    p_q.space_after = Pt(6)
+
+    p_a = full_doc.add_paragraph(draft)
+    p_a.space_after = Pt(14)
+
+    # Add to the review document if needed
+    if needs_review:
+        p_q_r = review_doc.add_paragraph()
+        run_q_r = p_q_r.add_run(f"Q{i}: {question}")
+        run_q_r.bold = True
+        run_q_r.font.size = Pt(11)
+        p_q_r.space_after = Pt(6)
+
+        p_a_r = review_doc.add_paragraph(draft)
+        p_a_r.space_after = Pt(14)
 
         p_q = full_doc.add_paragraph()
         run_q = p_q.add_run(f"Q{i}: {question}")
