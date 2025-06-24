@@ -1,9 +1,7 @@
 # ui_streamlit.py
 
-import numpy as np
-from qdrant_client import models
-from core.search import get_qdrant_client
-import requests
+# ui_streamlit.py (Final, Cleaned Version)
+
 import streamlit as st
 from tempfile import NamedTemporaryFile
 from run_pipeline import run_pipeline
@@ -11,218 +9,66 @@ from core.embed import embed_final_rfp
 import os
 import shutil
 
-# ===================================================================
-# ================= TEMPORARY DEBUGGING CODE ========================
-# ===================================================================
-# # Place this right after your imports at the top of ui_streamlit.py
-
-# st.subheader("🕵️‍♂️ Debugging Info")
-# st.write("The Streamlit app is currently using these secrets:")
-# try:
-#     # Attempt to read the secrets
-#     url_from_secrets = st.secrets.get("QDRANT_CLUSTER_URL", "SECRET NOT FOUND")
-#     key_from_secrets = st.secrets.get("QDRANT_API_KEY", "SECRET NOT FOUND")
-
-#     # For security, we'll only display a portion of the key
-#     if key_from_secrets != "SECRET NOT FOUND" and len(key_from_secrets) > 8:
-#         key_display = f"Starts with '{key_from_secrets[:4]}', Ends with '{key_from_secrets[-4:]}'"
-#     else:
-#         key_display = "SECRET NOT FOUND or key is too short"
-
-#     # Display the credentials the app is using
-#     st.info(f"**Cluster URL:** `{url_from_secrets}`")
-#     st.warning(f"**API Key:** `{key_display}`")
-
-# except Exception as e:
-#     st.error(f"An error occurred while trying to read secrets: {e}")
-
-# st.divider()
-
-# # ===================================================================
-# # ================= NEW: "WRITE TEST" CODE ==========================
-# # ===================================================================
-# Place this block right after the first one
-
-st.subheader("✍️ Qdrant Write Test")
-
-
-# Get the client using the cached function from your search.py
-client = get_qdrant_client()
-
-if client:
-    TEST_COLLECTION_NAME = "streamlit-write-test"
-    st.write(
-        f"Attempting to create/write to a test collection named: `{TEST_COLLECTION_NAME}`")
-    try:
-        # 1. Attempt to create a test collection. Using recreate_collection is easiest for a test.
-        client.recreate_collection(
-            collection_name=TEST_COLLECTION_NAME,
-            vectors_config=models.VectorParams(
-                size=4, distance=models.Distance.DOT)  # Small, simple vector
-        )
-        st.success("✅ Step 1: Successfully CREATED the test collection.")
-
-        # 2. Attempt to upsert a single point into the new collection
-        client.upsert(
-            collection_name=TEST_COLLECTION_NAME,
-            points=[
-                models.PointStruct(id=1, vector=np.random.rand(
-                    4).tolist(), payload={"test": "success"})
-            ],
-            wait=True
-        )
-        st.success(
-            "✅ Step 2: Successfully WROTE a point into the test collection.")
-
-        st.balloons()
-        st.info("🎉 CONCLUSION: The Write Test was successful! This means the Streamlit app has full read/write permissions for your Qdrant cluster.")
-
-    except Exception as e:
-        st.error("❌ CONCLUSION: The Write Test FAILED.")
-        st.write("The app was unable to write to your Qdrant cluster. This could indicate a permissions issue with the API key.")
-        # This will print the full technical error details below
-        st.exception(e)
-else:
-    st.error("Could not get a Qdrant client for the write test.")
-
-st.divider()
-
-# ===================================================================
-# ================= FINAL TEST: LIST COLLECTIONS ====================
-# ===================================================================
-st.subheader("🔍 List Collections Test")
-st.write("Let's see what collections the Streamlit app can find in the cluster.")
-
-
-client = get_qdrant_client()
-
-if client:
-    try:
-        # Ask the client for all collections it knows about
-        collections_response = client.get_collections()
-        st.success("✅ Successfully retrieved the list of collections.")
-
-        found_collections = [c.name for c in collections_response.collections]
-
-        if not found_collections:
-            st.warning("⚠️ The cluster returned an empty list of collections.")
-        else:
-            st.write("Found the following collections:")
-            st.json(found_collections)  # Display as a clean JSON list
-
-        # Explicitly check for the collection we need
-        if "past_rfp_answers" in found_collections:
-            st.success(
-                "🎉 This is very strange! 'past_rfp_answers' IS in the list!")
-        else:
-            st.error(
-                "❌ CRITICAL FINDING: 'past_rfp_answers' is NOT in the list found by the app.")
-
-    except Exception as e:
-        st.error("❌ An error occurred while trying to list collections.")
-        st.exception(e)
-else:
-    st.error("Could not get Qdrant client for the list collections test.")
-
-st.divider()
-# ===================================================================
-# ===================== END OF ALL DEBUGGING ========================
-# ===================================================================
-# ===================================================================
-# ================= END OF "WRITE TEST" CODE ========================
-# ===================================================================
-# ===================================================================
-# ================= END OF DEBUGGING CODE ===========================
-# ===================================================================
-
-
-# ... the rest of your ui_streamlit.py code starts here
-
-# Styling for dark theme + white labels
+# --- Page Configuration ---
 st.set_page_config(page_title="RFP Automation Tool", layout="centered")
-st.markdown("""
-<style>
-/* Custom CSS omitted for brevity */
-</style>
-""", unsafe_allow_html=True)
 
-# Add logo (optional)
+# Your custom CSS styles can be placed here if you have any.
+# st.markdown("""<style>...</style>""", unsafe_allow_html=True)
+
+
+# --- UI Application Starts Here ---
+
 st.image("fulllogo_transparent_nobuffer.png", width=200)
 
-# Paths
-NEW_RFPS_DIR = "new_rfps"
+# Define paths used by the app
 PAST_RFPS_DIR = "past_rfps"
 OUTPUT_DIR = "output"
 
-st.title("\U0001F4C4 RFP Draft Assistant")
+st.title("📄 RFP Draft Assistant")
 
-# Sidebar navigation
-page = st.sidebar.selectbox("Navigation", ["Upload New RFP", "View Past RFPs"])
 
-if page == "Upload New RFP":
-    st.header("\U0001F4E4 Upload a New RFP")
-    uploaded_file = st.file_uploader("Upload a .docx RFP file", type="docx")
+# --- Sidebar Navigation ---
+page = st.sidebar.selectbox(
+    "Navigation", ["Process New RFP", "View Past RFPs"])
 
-    if uploaded_file is not None:
+
+# --- Page 1: Process New RFP ---
+if page == "Process New RFP":
+
+    st.header("1. Generate Draft from New RFP")
+    uploaded_file = st.file_uploader(
+        "Upload a .docx RFP file", type="docx", key="new_rfp_upload")
+
+    if uploaded_file:
+        # Use a temporary file to safely handle the upload
         with NamedTemporaryFile(delete=False, suffix=".docx") as tmp:
             tmp.write(uploaded_file.getbuffer())
             tmp_path = tmp.name
 
-        if st.button("Generate Draft Responses"):
-            with st.spinner("Running pipeline. This may take a few minutes..."):
+        if st.button("Generate Draft Responses", type="primary"):
+            with st.spinner("Analyzing document and searching database... This may take a few minutes."):
                 try:
                     run_pipeline(tmp_path)
                     st.success("✅ Draft Generation Complete!")
 
-                    with open("output/generated_rfp_draft.docx", "rb") as f:
-                        st.download_button(
-                            "⬇ Download Full Draft", f, file_name="generated_rfp_draft.docx")
-
-                    review_path = "output/low_confidence_rfp_draft.docx"
-                    if os.path.exists(review_path):
-                        with open(review_path, "rb") as f:
+                    # Provide download links for the generated documents
+                    full_draft_path = os.path.join(
+                        OUTPUT_DIR, "generated_rfp_draft.docx")
+                    if os.path.exists(full_draft_path):
+                        with open(full_draft_path, "rb") as f:
                             st.download_button(
-                                "⚠ Download Low-Confidence Draft", f, file_name="low_confidence_rfp_draft.docx")
+                                "⬇️ Download Full Draft", f, file_name="generated_rfp_draft.docx"
+                            )
 
+                    review_draft_path = os.path.join(
+                        OUTPUT_DIR, "low_confidence_rfp_draft.docx")
+                    if os.path.exists(review_draft_path):
+                        with open(review_draft_path, "rb") as f:
+                            st.download_button(
+                                "⬇️ Download Low-Confidence Draft", f, file_name="low_confidence_rfp_draft.docx"
+                            )
                 except Exception as e:
-                    st.error(f"❌ Error during processing: {e}")
-
-    st.header("✅ Upload Final Draft for Archiving and Vectorization")
-    final_uploaded_file = st.file_uploader(
-        "Upload your final reviewed RFP draft (.docx)", type="docx", key="final")
-
-    if final_uploaded_file is not None:
-        with NamedTemporaryFile(delete=False, suffix=".docx") as final_tmp:
-            final_tmp.write(final_uploaded_file.getbuffer())
-            final_tmp_path = final_tmp.name
-
-        if st.button("Embed and Save Final Draft"):
-            with st.spinner("Embedding final draft and saving..."):
-                try:
-                    embed_final_rfp(final_tmp_path)
-                    st.success("🧠 Final RFP embedded to Qdrant successfully!")
-
-                    os.makedirs(PAST_RFPS_DIR, exist_ok=True)
-                    final_save_path = os.path.join(
-                        PAST_RFPS_DIR, final_uploaded_file.name)
-                    shutil.copy(final_tmp_path, final_save_path)
-                    st.success(f"✅ Final draft saved to '{final_save_path}'")
-
-                except Exception as e:
-                    st.error(f"❌ Error during final draft processing: {e}")
-
-elif page == "View Past RFPs":
-    st.header("🗂️ Past RFPs Archive")
-    rfp_files = [f for f in os.listdir(PAST_RFPS_DIR) if f.endswith(".docx")]
-
-    if not rfp_files:
-        st.info("No archived RFPs found yet.")
-    else:
-        for rfp_file in rfp_files:
-            rfp_path = os.path.join(PAST_RFPS_DIR, rfp_file)
-            with open(rfp_path, "rb") as f:
-                st.download_button(
-                    f"⬇ Download {rfp_file}", f, file_name=rfp_file)
+                    st.error(
 
 
 # # LOCAL ONLY
