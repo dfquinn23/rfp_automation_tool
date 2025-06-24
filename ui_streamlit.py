@@ -1,5 +1,8 @@
 # ui_streamlit.py
 
+import numpy as np
+from qdrant_client import models
+from core.search import get_qdrant_client
 import requests
 import streamlit as st
 from tempfile import NamedTemporaryFile
@@ -34,6 +37,58 @@ except Exception as e:
     st.error(f"An error occurred while trying to read secrets: {e}")
 
 st.divider()
+
+# ===================================================================
+# ================= NEW: "WRITE TEST" CODE ==========================
+# ===================================================================
+# Place this block right after the first one
+
+st.subheader("✍️ Qdrant Write Test")
+
+
+# Get the client using the cached function from your search.py
+client = get_qdrant_client()
+
+if client:
+    TEST_COLLECTION_NAME = "streamlit-write-test"
+    st.write(
+        f"Attempting to create/write to a test collection named: `{TEST_COLLECTION_NAME}`")
+    try:
+        # 1. Attempt to create a test collection. Using recreate_collection is easiest for a test.
+        client.recreate_collection(
+            collection_name=TEST_COLLECTION_NAME,
+            vectors_config=models.VectorParams(
+                size=4, distance=models.Distance.DOT)  # Small, simple vector
+        )
+        st.success("✅ Step 1: Successfully CREATED the test collection.")
+
+        # 2. Attempt to upsert a single point into the new collection
+        client.upsert(
+            collection_name=TEST_COLLECTION_NAME,
+            points=[
+                models.PointStruct(id=1, vector=np.random.rand(
+                    4).tolist(), payload={"test": "success"})
+            ],
+            wait=True
+        )
+        st.success(
+            "✅ Step 2: Successfully WROTE a point into the test collection.")
+
+        st.balloons()
+        st.info("🎉 CONCLUSION: The Write Test was successful! This means the Streamlit app has full read/write permissions for your Qdrant cluster.")
+
+    except Exception as e:
+        st.error("❌ CONCLUSION: The Write Test FAILED.")
+        st.write("The app was unable to write to your Qdrant cluster. This could indicate a permissions issue with the API key.")
+        # This will print the full technical error details below
+        st.exception(e)
+else:
+    st.error("Could not get a Qdrant client for the write test.")
+
+st.divider()
+# ===================================================================
+# ================= END OF "WRITE TEST" CODE ========================
+# ===================================================================
 # ===================================================================
 # ================= END OF DEBUGGING CODE ===========================
 # ===================================================================

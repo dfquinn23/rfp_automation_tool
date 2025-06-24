@@ -26,3 +26,5 @@ loguru
 pydantic
 
 sentence-transformers
+
+numpy
