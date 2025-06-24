@@ -86,6 +86,48 @@ else:
     st.error("Could not get a Qdrant client for the write test.")
 
 st.divider()
+
+# ===================================================================
+# ================= FINAL TEST: LIST COLLECTIONS ====================
+# ===================================================================
+st.subheader("🔍 List Collections Test")
+st.write("Let's see what collections the Streamlit app can find in the cluster.")
+
+
+client = get_qdrant_client()
+
+if client:
+    try:
+        # Ask the client for all collections it knows about
+        collections_response = client.get_collections()
+        st.success("✅ Successfully retrieved the list of collections.")
+
+        found_collections = [c.name for c in collections_response.collections]
+
+        if not found_collections:
+            st.warning("⚠️ The cluster returned an empty list of collections.")
+        else:
+            st.write("Found the following collections:")
+            st.json(found_collections)  # Display as a clean JSON list
+
+        # Explicitly check for the collection we need
+        if "past_rfp_answers" in found_collections:
+            st.success(
+                "🎉 This is very strange! 'past_rfp_answers' IS in the list!")
+        else:
+            st.error(
+                "❌ CRITICAL FINDING: 'past_rfp_answers' is NOT in the list found by the app.")
+
+    except Exception as e:
+        st.error("❌ An error occurred while trying to list collections.")
+        st.exception(e)
+else:
+    st.error("Could not get Qdrant client for the list collections test.")
+
+st.divider()
+# ===================================================================
+# ===================== END OF ALL DEBUGGING ========================
+# ===================================================================
 # ===================================================================
 # ================= END OF "WRITE TEST" CODE ========================
 # ===================================================================
