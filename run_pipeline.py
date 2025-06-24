@@ -11,12 +11,12 @@ from core.generate import get_embedding
 from core.search import search_qdrant
 from core.generate import generate_draft_answer
 from core.logger import log_result
+from pathlib import Path
 from dotenv import load_dotenv
-
-env_path = os.path.join(os.path.dirname(__file__), "..", ".env")
-load_dotenv(dotenv_path=env_path)
-print("[DEBUG] QDRANT_CLUSTER_URL =", os.getenv("QDRANT_CLUSTER_URL"))
-print("[DEBUG] QDRANT_API_KEY =", os.getenv("QDRANT_API_KEY"))
+# This automatically finds the project root and loads the .env file.
+project_root = Path(__file__).parent.parent
+dotenv_path = project_root / ".env"
+load_dotenv(dotenv_path=dotenv_path)
 
 
 def run_pipeline(input_path):

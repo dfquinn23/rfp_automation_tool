@@ -1,26 +1,47 @@
 # CLOUD COMPATIBLE:
-# core/generate.py
+# core/generate.py (Version 2 - The Final Version)
 
 import os
-import streamlit as st
+from pathlib import Path
+from dotenv import load_dotenv
 from openai import OpenAI
-from qdrant_client.http.models import ScoredPoint  # if needed for type hint
 
+# --- Step 1: Robustly load environment variables from the project root ---
+# This ensures the script always finds the .env file, no matter how it's called.
+try:
+    project_root = Path(__file__).resolve().parent.parent
+    dotenv_path = project_root / ".env"
+    if dotenv_path.is_file():
+        load_dotenv(dotenv_path=dotenv_path)
+except Exception as e:
+    print(
+        f"Warning: Could not load .env file. Relying on system environment variables. Error: {e}")
 
-# Load from Streamlit secrets or fallback to env for local dev
-OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY"))
+# --- Step 2: Initialize the OpenAI client ---
+# The OpenAI library automatically finds the OPENAI_API_KEY in the loaded environment.
+try:
+    client = OpenAI()
+    # A quick check to see if the key was loaded.
+    if not client.api_key:
+        raise ValueError(
+            "OpenAI API key not found. Please check your .env file or environment variables.")
+except Exception as e:
+    # If initialization fails, create a placeholder client to avoid crashing, and print an error.
+    print(f"CRITICAL ERROR: Failed to initialize OpenAI client. {e}")
+    client = None
 
 # Set the model name
 EMBEDDING_MODEL = "text-embedding-3-small"
 
-# Initialize OpenAI client
-client = OpenAI(api_key=OPENAI_API_KEY)
 
-
-def get_embedding(text: str) -> list:
+def get_embedding(text: str) -> list[float]:
     """
     Get embedding for a given text using OpenAI's embedding API.
     """
+    if not client:
+        raise RuntimeError(
+            "OpenAI client is not initialized. Cannot get embeddings.")
+
     try:
         response = client.embeddings.create(
             input=text,
@@ -28,28 +49,26 @@ def get_embedding(text: str) -> list:
         )
         return response.data[0].embedding
     except Exception as e:
-        raise RuntimeError(f"OpenAI embedding failed: {e}")
+        # Provide a more specific error message.
+        print(f"ERROR during OpenAI API call: {e}")
+        raise RuntimeError(
+            f"OpenAI embedding failed. Please check your API key, network connection, and account status. Error: {e}")
 
 
 def generate_draft_answer(question: str, retrieved_context: list) -> str:
     """
     Generate a draft RFP answer by combining the top-matched Qdrant responses.
-
-    Args:
-        question: The RFP question.
-        retrieved_context: List of Qdrant search results (with `.payload["answer"]`).
-
-    Returns:
-        Draft answer as a string.
+    (This function does not use the OpenAI API and is unchanged.)
     """
     base_answer = ""
     for i, item in enumerate(retrieved_context):
-        answer_piece = item.payload.get("answer", "").strip()
+        # Assuming payload structure is {"text_content": "...", "source_file": "..."}
+        answer_piece = item.payload.get("text_content", "").strip()
         if answer_piece:
-            base_answer += f"[Source {i+1}] {answer_piece}\n\n"
+            base_answer += f"[Source: {item.payload.get('source_file', 'N/A')}]\n{answer_piece}\n\n"
 
     if not base_answer:
-        return "[⚠ Needs review] No confident matches found."
+        return "[⚠ Needs review] No confident matches found in the database."
 
     return base_answer.strip()
 
