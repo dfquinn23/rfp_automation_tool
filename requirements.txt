@@ -24,3 +24,5 @@ loguru
 
 # Just in case you're using structured typing
 pydantic
+
+sentence-transformers

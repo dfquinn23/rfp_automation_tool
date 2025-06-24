@@ -8,6 +8,39 @@ from core.embed import embed_final_rfp
 import os
 import shutil
 
+# ===================================================================
+# ================= TEMPORARY DEBUGGING CODE ========================
+# ===================================================================
+# Place this right after your imports at the top of ui_streamlit.py
+
+st.subheader("🕵️‍♂️ Debugging Info")
+st.write("The Streamlit app is currently using these secrets:")
+try:
+    # Attempt to read the secrets
+    url_from_secrets = st.secrets.get("QDRANT_CLUSTER_URL", "SECRET NOT FOUND")
+    key_from_secrets = st.secrets.get("QDRANT_API_KEY", "SECRET NOT FOUND")
+
+    # For security, we'll only display a portion of the key
+    if key_from_secrets != "SECRET NOT FOUND" and len(key_from_secrets) > 8:
+        key_display = f"Starts with '{key_from_secrets[:4]}', Ends with '{key_from_secrets[-4:]}'"
+    else:
+        key_display = "SECRET NOT FOUND or key is too short"
+
+    # Display the credentials the app is using
+    st.info(f"**Cluster URL:** `{url_from_secrets}`")
+    st.warning(f"**API Key:** `{key_display}`")
+
+except Exception as e:
+    st.error(f"An error occurred while trying to read secrets: {e}")
+
+st.divider()
+# ===================================================================
+# ================= END OF DEBUGGING CODE ===========================
+# ===================================================================
+
+
+# ... the rest of your ui_streamlit.py code starts here
+
 # Styling for dark theme + white labels
 st.set_page_config(page_title="RFP Automation Tool", layout="centered")
 st.markdown("""
