@@ -12,7 +12,7 @@ load_dotenv()
 # --Configuration--
 
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
-QDRANT_CLUSTER_URL = "https://295f06f4-25f8-4197-bd5e-2227d256a1f1.us-east4-0.gcp.cloud.qdrant.io:6333"
+QDRANT_CLUSTER_URL = "https://13234bf2-e863-42bc-b01a-76d0c453560b.eu-west-2-0.aws.cloud.qdrant.io"
 COLLECTION_NAME = "past_rfp_answers"
 OLLAMA_EMBEDDING_MODEL = "nomic-embed-text"
 QA_PATH = "output/past_rfps_qa.json"
