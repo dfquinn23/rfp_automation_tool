@@ -22,7 +22,9 @@ except Exception as e:
 # --- Step 2: Initialize the OpenAI client ---
 # The OpenAI library automatically finds the OPENAI_API_KEY in the loaded environment.
 try:
-    client = OpenAI()
+    client = OpenAI(
+        api_key=st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY")
+    )
     if not client.api_key:
         raise ValueError(
             "OpenAI API key not found. Please check your .env file or environment variables.")
