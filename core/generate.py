@@ -23,7 +23,7 @@ except Exception as e:
 # The OpenAI library automatically finds the OPENAI_API_KEY in the loaded environment.
 try:
     client = OpenAI(
-        api_key=st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY")
+        api_key=st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY"))
     )
     if not client.api_key:
         raise ValueError(
