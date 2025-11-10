@@ -1,15 +1,16 @@
 # core/config.py
-# CLOUD-COMPATIBLE VERSION
+# Production-ready configuration for Streamlit Cloud deployment
 
 import os
 import streamlit as st
 from dotenv import load_dotenv
 
+# Load .env for local development (ignored in production)
 load_dotenv()
 
-# Model & API configuration
-OLLAMA_EMBEDDING_MODEL = "nomic-embed-text"
-OLLAMA_GENERATION_MODEL = "llama3"
+# Model & API configuration - prioritize Streamlit secrets over environment variables
+OLLAMA_EMBEDDING_MODEL = "nomic-embed-text"  # For local development only
+OLLAMA_GENERATION_MODEL = "llama3"  # For local development only
 OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY"))
 OPENAI_MODEL_NAME = "gpt-4"
 OPENAI_GENERATION_MODEL = "gpt-4-turbo"
@@ -22,7 +23,8 @@ USE_OPENAI = True
 # Paths
 LOG_DIR = "logs"
 OUTPUT_DIR = "output"
+PAST_RFPS_DIR = "past_rfps"
 
 # NOTE: Qdrant client is NOT initialized here to avoid conflicts.
-# Use get_qdrant_client() from core.search instead.
+# Always use get_qdrant_client() from core.search instead.
 
