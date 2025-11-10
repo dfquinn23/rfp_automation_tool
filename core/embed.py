@@ -7,11 +7,8 @@ from docx import Document
 from qdrant_client import QdrantClient
 from qdrant_client.models import PointStruct, VectorParams, Distance
 from core.generate import get_embedding
-from core.config import (
-    QDRANT_API_KEY,
-    QDRANT_CLUSTER_URL,
-    COLLECTION_NAME
-)
+from core.search import get_qdrant_client
+client = get_qdrant_client()
 
 # Initialize Qdrant client
 client = QdrantClient(
