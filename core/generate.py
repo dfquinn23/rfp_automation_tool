@@ -82,3 +82,5 @@ def generate_draft_answer(question: str, retrieved_context: list) -> str:
         return "Matches were found, but they had no text content."
 
     return base_answer.strip()
+
+
