@@ -56,15 +56,23 @@ def get_embedding(text: str) -> list[float]:
 def generate_draft_answer(question: str, retrieved_context: list) -> str:
     """
     Generate a draft RFP answer by combining the top-matched Qdrant responses.
+    Handles both old format (answer/source) and new format (text_content/source_file).
     """
     if not retrieved_context:
         return "No relevant information found in the database."
 
     base_answer = ""
     for i, item in enumerate(retrieved_context):
-        # Correctly look for "text_content"
-        answer_piece = item.payload.get("text_content", "").strip()
-        source_file = item.payload.get("source_file", "N/A")
+        # Handle both old and new payload formats
+        answer_piece = (
+            item.payload.get("text_content", "") or  # New format
+            item.payload.get("answer", "")           # Old format (fallback)
+        ).strip()
+        
+        source_file = (
+            item.payload.get("source_file") or       # New format
+            item.payload.get("source", "N/A")        # Old format (fallback)
+        )
 
         if answer_piece:
             # Add the source file and score for better context
