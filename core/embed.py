@@ -1,12 +1,12 @@
 # core/embed.py
-# CLOUD-COMPATIBLE VERSION
+# CLOUD-COMPATIBLE VERSION - Uses consistent payload structure
 
 import os
 import uuid
 from docx import Document
 from qdrant_client.models import PointStruct, VectorParams, Distance
 from core.generate import get_embedding
-from core.search import get_qdrant_client  # Reuse the cached client
+from core.search import get_qdrant_client
 import streamlit as st
 
 # Get collection name from secrets/config
@@ -38,7 +38,9 @@ def ensure_correct_collection():
 def embed_final_rfp(file_path):
     """
     Load a final RFP draft from DOCX, create embeddings for each paragraph, 
-    and upload to Qdrant.
+    and upload to Qdrant using the SAME payload structure as the original database.
+    
+    Payload structure matches original: {"answer": "...", "source": "..."}
     """
     client = get_qdrant_client()
     if client is None:
@@ -57,8 +59,8 @@ def embed_final_rfp(file_path):
             point = PointStruct(
                 id=str(uuid.uuid4()),
                 payload={
-                    "text_content": text,
-                    "source_file": os.path.basename(file_path)
+                    "answer": text,  # Use "answer" to match original database structure
+                    "source": os.path.basename(file_path)  # Use "source" to match original
                 },
                 vector=vector
             )
